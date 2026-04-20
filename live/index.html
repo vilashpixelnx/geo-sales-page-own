@@ -15,6 +15,7 @@
     rel="stylesheet">
   <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.png" />
   <link rel="stylesheet" href="assets/css/ani.css" />
+  <link rel="stylesheet" href="assets/css/sticky_bar.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YNPJHHHLH"></script>
@@ -78,13 +79,13 @@
                   </div>
                 </div>
                 <h1 data-aos="fade-up" data-aos-delay="250"><img src="assets/images/star.png" alt="Icon">
-                  Stop Being Invisible to<br>
-                  <span>ChatGPT, Claude & Perplexity.</span><br>
-                  Get Cited. Get Traffic. Win.
+                  <span class="span_normal">Stop Being Invisible to </span> <br>
+                  <span class="span_gradinet">ChatGPT, Claude & Perplexity.</span><br>
+                   <span class="span_normal">Get Cited. Get Traffic. Win. </span>
                 </h1>
+                
                 <p data-aos="fade-up" data-aos-delay="250">
-                  The only WordPress plugin that fully optimises your site for AI search engines — with an<br>
-                  Auto AI-Ready Writer that adds FAQs, Answer Capsules, Schema & more in
+                  The only WordPress plugin that fully optimises your site for AI search engines — with an <br> Auto AI-Ready Writer that adds FAQs, Answer Capsules, Schema & more in 60 seconds flat.
                 </p>
 
                 <div class="ma_video_wrapper">
@@ -433,7 +434,7 @@
   <!--=== Industry End ===-->
 
   <!--=== The Problem Start ===-->
-  <div class="geo_howwork_section" id="Howit">
+  <div class="geo_howwork_section geo_problem_section" id="Howit">
     <div class="container">
       <div class="geo_main_heading">
         <div class="geo_banner_txt_wrapper">
@@ -448,26 +449,48 @@
           exactly why…
         </p>
       </div>
+    </div>
+    <div class="container-fluid">
+      <div class="geo_problem_main_img text-center" data-aos="fade-up" data-aos-delay="180">
+          <img src="assets/images/proble_main_img.png" alt="image">
+        </div>
+    </div>
+    <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="geo_problem_wrapper">
-            <div class="geo_problem_imgs">
+        <div class="col-lg-6">
+          <div class="geo_problem_wrapper flex">
+
               <img src="assets/images/problem01.png" alt="image">
+
+            <div class="headbox">
+              <h4>AI Bots Are Blocked</h4>
+              <p>Most WordPress sites block GPTBot and ClaudeBot by default. If AI can't crawl you, it will never cite
+                you.</p>
             </div>
-            <h4>AI Bots Are Blocked</h4>
-            <p>Most WordPress sites block GPTBot and ClaudeBot by default. If AI can't crawl you, it will never cite
-              you.</p>
           </div>
-          <div class="geo_problem_wrapper">
-            <div class="geo_problem_imgs">
+          <div class="geo_problem_wrapper flex">
+
               <img src="assets/images/problem02.png" alt="image">
+
+            <div class="headbox">
+              <h4>Zero Schema Markup</h4>
+              <p>Without JSON-LD schema, AI has no way to understand who you are, what you cover, or why you're credible.
+              </p>
             </div>
-            <h4>Zero Schema Markup</h4>
-            <p>Without JSON-LD schema, AI has no way to understand who you are, what you cover, or why you're credible.
-            </p>
+          </div>
+          <div class="geo_problem_wrapper flex">
+
+                <img src="assets/images/problem05.png" alt="image">
+
+              <div class="headbox">
+                <h4>Missing llms.txt File</h4>
+                <p>Early adopters using llms.txt report 40% more AI citations. Most sites don't even know this file
+                  exists.
+                </p>
+              </div>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-6">
           <div class="geo_problem_wrapper flex">
             <img src="assets/images/problem03.png" alt="image">
             <div class="headbox">
@@ -477,25 +500,18 @@
               </p>
             </div>
           </div>
-          <div class="flexdevide">
-            <div class="geo_problem_wrapper">
-              <div class="geo_problem_imgs">
-                <img src="assets/images/problem04.png" alt="image">
-              </div>
-              <h4>No Answer Capsules</h4>
-              <p>AI models prefer pages with extractable direct answers. Without them, you lose citations to competitors
-                daily.</p>
-            </div>
-            <div class="geo_problem_wrapper">
-              <div class="geo_problem_imgs">
-                <img src="assets/images/problem05.png" alt="image">
-              </div>
-              <h4>Missing llms.txt File</h4>
-              <p>Early adopters using llms.txt report 40% more AI citations. Most sites don't even know this file
-                exists.
-              </p>
+
+          <div class="geo_problem_wrapper flex">
+
+              <img src="assets/images/problem04.png" alt="image">
+
+            <div class="headbox">
+            <h4>No Answer Capsules</h4>
+            <p>AI models prefer pages with extractable direct answers. Without them, you lose citations to competitors
+              daily.</p>
             </div>
           </div>
+
           <div class="geo_problem_wrapper flex">
             <img src="assets/images/problem06.png" alt="image">
             <div class="headbox">
@@ -561,11 +577,11 @@
             <div class="geo_before_text">After GEO Optimizer</div>
             <div class="geo_before_list">
               <ul>
-                <li><img src="assets/images/afb1.png" alt="Icon"> AI Bot Access <span>20%</span></li>
-                <li><img src="assets/images/afb2.png" alt="Icon"> Schema Markup <span>10%</span></li>
-                <li><img src="assets/images/afb3.png" alt="Icon"> FAQ Sections <span>15%</span></li>
-                <li><img src="assets/images/afb4.png" alt="Icon"> Answer Capsule <span>12%</span></li>
-                <li><img src="assets/images/afb5.png" alt="Icon"> llms.txt <span>08%</span></li>
+                <li><img src="assets/images/afb1.png" alt="Icon"> AI Bot Access <span>100%</span></li>
+                <li><img src="assets/images/afb2.png" alt="Icon"> Schema Markup <span>100%</span></li>
+                <li><img src="assets/images/afb3.png" alt="Icon"> FAQ Sections <span>100%</span></li>
+                <li><img src="assets/images/afb4.png" alt="Icon"> Answer Capsule <span>100%</span></li>
+                <li><img src="assets/images/afb5.png" alt="Icon"> llms.txt <span>100%</span></li>
               </ul>
               <div class="geo_before_score">
                 <h2><img src="assets/images/happy.png" alt="Icon"> 95</h2>
@@ -921,7 +937,7 @@
   <!--=== Custom Branding End ===-->
 
   <!--=== The Problem Start ===-->
-  <div class="geo_howwork_section geo_howtwo_section" id="Howit">
+  <div class="geo_howwork_section geo_howtwo_section geo_features_section" id="Howit">
     <div class="container">
       <div class="geo_main_heading">
         <div class="geo_banner_txt_wrapper">
@@ -933,57 +949,74 @@
         </h1>
         <p>One plugin. Every technical and content requirement<br> — automated, in minutes.</p>
       </div>
+
+      <div class="geo_features_main_img text-center" data-aos="fade-up" data-aos-delay="180">
+          <img src="assets/images/feature_main_img.png" alt="image">
+        </div>
+
       <div class="row">
-        <div class="col-lg-4">
-          <div class="geo_problem_wrapper">
+        <div class="col-lg-6">
+          <div class="geo_problem_wrapper flagship1 flex">
             <img src="assets/images/fe01.png" alt="image">
-            <h5>Technical GEO</h5>
-            <h4>AI Bot Access Manager</h4>
-            <p>Allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot & cohere-ai to freely crawl your
-              site.
-              One toggle. Instant effect.</p>
+            <div class="headbox">
+              <h5>Technical GEO</h5>
+              <h4>AI Bot Access Manager</h4>
+              <p>Allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot & cohere-ai to freely crawl your
+                site.
+                One toggle. Instant effect.</p>
+              </div>
           </div>
-          <div class="geo_problem_wrapper">
+          <div class="geo_problem_wrapper flagship1 flex">
             <img src="assets/images/fe02.png" alt="image">
+            <div class="headbox">
             <h5>Schema Markup</h5>
             <h4>Full JSON-LD Schema</h4>
             <p>Auto-injects Article, Organization, Person, FAQPage & BreadcrumbList schema on every page. Everything
               AI
               needs to trust and cite your content.
             </p>
+            </div>
           </div>
-          <div class="geo_problem_wrapper">
+          <div class="geo_problem_wrapper flagship1 flex">
             <img src="assets/images/fe03.png" alt="image">
-            <h5>AI Indexing</h5>
-            <h4>llms.txt Generator</h4>
-            <p>Auto-generates /llms.txt listing your priority pages for AI crawlers. Think of it as a VIP guide for
-              AI
-              bots visiting your site.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="geo_problem_wrapper flex">
-            <img src="assets/images/fe04.png" alt="image">
             <div class="headbox">
-              <h5>Flagship Feature</h5>
-              <h4>Auto AI-Ready Writer</h4>
-              <p>Select any post → tick enhancements → click one button. Claude AI rewrites with FAQs, answer
-                capsules,
-                authority signals & proper H2/H3 structure.
+              <h5>AI Indexing</h5>
+              <h4>llms.txt Generator</h4>
+              <p>Auto-generates /llms.txt listing your priority pages for AI crawlers. Think of it as a VIP guide for
+                AI
+                bots visiting your site.
               </p>
             </div>
           </div>
-          <div class="flexdevide">
-            <div class="geo_problem_wrapper">
+          <div class="geo_problem_wrapper flagship1 flex">
               <img src="assets/images/fe05.png" alt="image">
+              <div class="headbox">
               <h5>Zero Effort</h5>
               <h4>Auto-detects FAQ</h4>
               <p>Automatically detects headings ending in "?" and wraps them in FAQPage schema. No manual markup. No
                 configuration required.</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="geo_problem_wrapper flagship1 flex">
+            <img src="assets/images/fe04.png" alt="image">
+            <div class="headbox">
+              <div class="headbox">
+                <h5>Flagship1 Feature</h5>
+                <h4>Auto AI-Ready Writer</h4>
+                <p>Select any post → tick enhancements → click one button. Claude AI rewrites with FAQs, answer
+                  capsules,
+                  authority signals & proper H2/H3 structure.
+                </p>
+              </div>
             </div>
-            <div class="geo_problem_wrapper">
-              <img src="assets/images/fe06.png" alt="image">
+          </div>
+
+
+          <div class="geo_problem_wrapper flagship1 flex">
+            <img src="assets/images/fe06.png" alt="image">
+            <div class="headbox">
               <h5>+40% Citations</h5>
               <h4>Answer capsule code</h4>
               <p>Use [geo_answer] to create AI-extractable answer blocks. Research shows 40% higher citation rates
@@ -992,7 +1025,8 @@
               </p>
             </div>
           </div>
-          <div class="geo_problem_wrapper flex">
+
+          <div class="geo_problem_wrapper flagship1 flex">
             <img src="assets/images/fe07.png" alt="image">
             <div class="headbox">
               <h5>Safety Net</h5>
@@ -1003,22 +1037,29 @@
               </p>
             </div>
           </div>
-          <div class="flexdevide">
-            <div class="geo_problem_wrapper">
-              <img src="assets/images/fe08.png" alt="image">
-              <h5>Analytics</h5>
-              <h4>GEO Audit & Scoring</h4>
-              <p>Comprehensive audit scores every post 0–100 on AI readiness. See exactly what's missing and jump
-                straight to the AI Writer to fix it.</p>
-            </div>
-            <div class="geo_problem_wrapper">
-              <img src="assets/images/fe09.png" alt="image">
+
+          <div class="geo_problem_wrapper flagship1 flex">
+            <img src="assets/images/fe09.png" alt="image">
+            <div class="headbox">
               <h5>ChatGPT Indexing</h5>
               <h4>Bing Auto-Ping on Publish</h4>
               <p>Every time you publish, your sitemap is pinged to Bing automatically — because ChatGPT uses Bing's
                 index for real-time results.
               </p>
             </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <div class="geo_problem_wrapper flagship1 flex">
+            <img src="assets/images/fe08.png" alt="image">
+            <div class="headbox">
+            <h5>Analytics</h5>
+            <h4>GEO Audit & Scoring</h4>
+            <p>Comprehensive audit scores every post 0–100 on AI readiness. See exactly what's missing and jump
+              straight to the AI Writer to fix it.</p>
+              </div>
           </div>
         </div>
         <div class="col-lg-12">
@@ -1096,28 +1137,28 @@
             <div class="geo_compare_column geo_compare_feature">
               <div class="geo_compare_title">Feature / Task</div>
               <ul class="geo_compare_list">
-                <li>Allow AI crawlers in robots.txt</li>
-                <li>JSON-LD schema on every page</li>
-                <li>FAQ sections on every post</li>
-                <li>Answer capsules for AI extraction</li>
-                <li>llms.txt generation</li>
-                <li>GEO audit & per-post scoring</li>
-                <li>Bing auto-ping on every publish</li>
-                <li>Total time to implement fully</li>
+                <li data-aos="fade-up" data-aos-delay="100">Allow AI crawlers in robots.txt</li>
+                <li data-aos="fade-up" data-aos-delay="150">JSON-LD schema on every page</li>
+                <li data-aos="fade-up" data-aos-delay="200">FAQ sections on every post</li>
+                <li data-aos="fade-up" data-aos-delay="250">Answer capsules for AI extraction</li>
+                <li data-aos="fade-up" data-aos-delay="300">llms.txt generation</li>
+                <li data-aos="fade-up" data-aos-delay="350">GEO audit & per-post scoring</li>
+                <li data-aos="fade-up" data-aos-delay="400">Bing auto-ping on every publish</li>
+                <li data-aos="fade-up" data-aos-delay="450">Total time to implement fully</li>
               </ul>
             </div>
             <div class="geo_compare_column geo_compare_manual">
               <img src="assets/images/tabicon1.png" class="tabicon1" alt="icon">
               <div class="geo_compare_title">DIY / Manual</div>
               <ul class="geo_compare_list">
-                <li>Manual edits — easy to break</li>
-                <li>Hours of dev work per post</li>
-                <li>Write manually one by one</li>
-                <li>Most don't even know it exists</li>
-                <li>Too technical for most users</li>
-                <li>No way to measure it</li>
-                <li>Always missed</li>
-                <li>40+ hours per site</li>
+                <li data-aos="fade-up" data-aos-delay="100">Manual edits — easy to break</li>
+                <li data-aos="fade-up" data-aos-delay="150">Hours of dev work per post</li>
+                <li data-aos="fade-up" data-aos-delay="200">Write manually one by one</li>
+                <li data-aos="fade-up" data-aos-delay="250">Most don't even know it exists</li>
+                <li data-aos="fade-up" data-aos-delay="300">Too technical for most users</li>
+                <li data-aos="fade-up" data-aos-delay="350">No way to measure it</li>
+                <li data-aos="fade-up" data-aos-delay="400">Always missed</li>
+                <li data-aos="fade-up" data-aos-delay="450">40+ hours per site</li>
               </ul>
             </div>
             <div class="geo_compare_column geo_compare_geo">
@@ -1127,14 +1168,14 @@
               <img src="assets/images/tabicon2.png" class="tabicon2" alt="icon">
               <!-- <div class="geo_compare_title">GEO Optimizer</div> -->
               <ul class="geo_compare_list">
-                <li>One toggle</li>
-                <li>Auto-injected</li>
-                <li>AI writes in 60 seconds</li>
-                <li>Shortcode + AI auto-add</li>
-                <li>One-click generator</li>
-                <li>Full dashboard audit</li>
-                <li>Fully automatic</li>
-                <li>Under 30 minutes</li>
+                <li data-aos="fade-up" data-aos-delay="100">One toggle</li>
+                <li data-aos="fade-up" data-aos-delay="150">Auto-injected</li>
+                <li data-aos="fade-up" data-aos-delay="200">AI writes in 60 seconds</li>
+                <li data-aos="fade-up" data-aos-delay="250">Shortcode + AI auto-add</li>
+                <li data-aos="fade-up" data-aos-delay="300">One-click generator</li>
+                <li data-aos="fade-up" data-aos-delay="350">Full dashboard audit</li>
+                <li data-aos="fade-up" data-aos-delay="400">Fully automatic</li>
+                <li data-aos="fade-up" data-aos-delay="450">Under 30 minutes</li>
               </ul>
             </div>
           </div>
@@ -2195,6 +2236,21 @@
   <!--=== Footer End ===-->
 
 
+<!-- sticky timer start -->
+   <!-- Float Bar -->
+  <div class="float-bar" id="floatBar">
+    <div class="float-timer">
+      <div class="ft-block"><span class="cnt-num timer_hours">00</span><span class="ft-lbl">Hrs</span></div>
+      <div class="ft-sep">:</div>
+      <div class="ft-block"><span class="cnt-num timer_minutes">00</span><span class="ft-lbl">Min</span></div>
+      <div class="ft-sep">:</div>
+      <div class="ft-block"><span class="cnt-num timer_seconds">00</span><span class="ft-lbl">Sec</span></div>
+    </div>
+    <p>🔥 Launch Special — Use Coupon GEO2 to get $2 off!</p>
+    <a onclick="scrollById('buynow')">Reserve My Spot →</a>
+  </div>
+<!-- sticky timer end -->
+
 
 
 
@@ -2204,79 +2260,11 @@
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/SmoothScroll.min.js"></script>
   <script src="assets/js/custom.js"></script>
-  <!-- <script>
-    window.addEventListener('scroll', function () {
-      const videoSection = document.getElementById('videoSection');
-      const rect = videoSection.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+  <script id="stickybarscript" src="https://stickybar.pixelnx.com/assets/js/stickybar.js?appid=322"></script>
 
-      if (rect.top < windowHeight - 500 && rect.bottom > 600) {
-        $('body').addClass('ma-hover-section');
 
-        videoSection.classList.add('video-active');
-      } else {
-        $('body').removeClass('ma-hover-section');
 
-        videoSection.classList.remove('video-active');
-      }
-    });
-  </script> -->
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const defaultTargetDate = '2026-05-01T23:59:59';
-      const timerSection = document.querySelector('.custom-countdown');
-      if (!timerSection) return;
-
-      const endDateString = timerSection.dataset.endDate || defaultTargetDate;
-      const endDate = new Date(endDateString).getTime();
-
-      const pad = (value) => String(value).padStart(2, '0');
-
-      const updateCountdown = () => {
-        const now = new Date().getTime();
-        const distance = endDate - now;
-
-        if (distance < 0) {
-          clearInterval(interval);
-          timerSection.querySelector('.countdown-box').innerHTML = '<div class="expired-message">Offer Expired!</div>';
-          return;
-        }
-
-        document.getElementById('days').innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
-        document.getElementById('hours').innerHTML = pad(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-        document.getElementById('minutes').innerHTML = pad(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-        document.getElementById('seconds').innerHTML = pad(Math.floor((distance % (1000 * 60)) / 1000));
-      };
-
-      updateCountdown();
-      const interval = setInterval(updateCountdown, 1000);
-    });
-
-    // Tab
-    var tabLinks = document.querySelectorAll(".tablinks");
-    var tabContent = document.querySelectorAll(".tabcontent");
-
-    tabLinks.forEach(function (el) {
-      el.addEventListener("click", openTabs);
-    });
-
-    function openTabs(el) {
-      var btnTarget = el.currentTarget;
-      var country = btnTarget.dataset.country;
-
-      tabContent.forEach(function (el) {
-        el.classList.remove("active");
-      });
-
-      tabLinks.forEach(function (el) {
-        el.classList.remove("active");
-      });
-      document.querySelector("#" + country).classList.add("active");
-
-      btnTarget.classList.add("active");
-    }
-  </script>
 
   <!--=== Optional JavaScript ===-->
 </body>

@@ -870,11 +870,16 @@ img.banner_img2 {
   text-align: center;
 }
 .geo_header_btn .geo_btn > span {
-  min-height: 60px;
-  animation: none;
-  background: #116bff;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  will-change: transform;
+min-height: inherit;
+    animation: none;
+    background: #116bff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
+    font-size: 20px;
+    min-width: inherit;
+    width: inherit;
+    padding: 6px 19px;
+    border-radius: 40px;
 }
 .geo_header_btn:hover .geo_btn > span {
   transform: scale(1.06);
@@ -1118,7 +1123,7 @@ img.powerful_bg2 {
   animation: 3s installation infinite alternate;
 }
 .geo_more_wrapper {
-  max-width: 970px;
+  /* max-width: 970px; */
   margin: auto;
   position: relative;
   z-index: 1;
@@ -1193,9 +1198,46 @@ img.powerful_bg2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  min-height: 725px;
+  flex-wrap: nowrap;
+  gap: 36px;
+  /* min-height: 725px; */
+}
+.geo_more_visual {
+  flex: 0 0 350px;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.55) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 18px 40px rgba(97, 48, 48, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.geo_more_visual::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 24px;
+  background: radial-gradient(circle at top left, rgba(17,107,255,.14), transparent 46%),
+    radial-gradient(circle at bottom right, rgba(255,154,61,.16), transparent 42%);
+  pointer-events: none;
+}
+.geo_more_visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 24px rgba(52, 27, 27, 0.12));
+}
+.geo_stcky_slide2 .geo_more_visual {
+  background: linear-gradient(180deg, rgba(253,238,255,.95) 0%, rgba(255,255,255,.6) 100%);
+}
+.geo_stcky_slide3 .geo_more_visual {
+  background: linear-gradient(180deg, rgba(238,246,255,.95) 0%, rgba(255,255,255,.6) 100%);
 }
 .geo_more_features::after {
   position: absolute;
@@ -1261,6 +1303,11 @@ img.powerful_bg2 {
 } */
 .geo_more_content {
   position: relative;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 0;
 }
 .geo_number {
   color: #2e253a;
@@ -1278,7 +1325,7 @@ img.powerful_bg2 {
 }
 .geo_more_content h5 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin: 25px 0 10px;
   background: linear-gradient(
@@ -1293,9 +1340,10 @@ img.powerful_bg2 {
 }
 .geo_more_content p {
   color: #222222;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  line-height: 1.75;
 }
 .geo_more_content div {
   background-color: #ffffff;
@@ -1614,6 +1662,12 @@ p.reflects {
 /* Authority css */
 
 /* Generate Video css */
+.text-center.your_current {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #09090b;
+}
 .geo_howwork_section {
   padding: 80px 0;
   position: relative;
@@ -1958,7 +2012,7 @@ p.reflects {
   padding: 80px 0;
 }
 .geo_swapback_section .container {
-  max-width: 1250px;
+  max-width: 1500px;
 }
 .geo_howtwo_section {
   padding: 80px 0 180px;
@@ -3628,6 +3682,28 @@ body {
   .geo_footer_section {
     padding: 50px 0;
   }
+  .geo_more_features {
+    padding: 28px;
+    gap: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+  }
+  .geo_more_visual {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+    min-height: 240px;
+  }
+  .geo_more_visual img {
+    max-width: 220px;
+  }
+  .geo_more_content {
+    padding: 0;
+  }
+  .geo_more_content h5 {
+    margin-top: 16px;
+  }
 
   .geo_slider_testimonials .swiper-slide {
     flex: 0 0 50%;
@@ -3689,8 +3765,22 @@ body {
     margin-bottom: 30px;
   }
   .geo_more_features {
-    padding: 30px;
+    padding: 24px;
     gap: 20px;
+  }
+  .geo_more_visual {
+    min-height: 210px;
+    padding: 18px;
+  }
+  .geo_more_visual img {
+    max-width: 190px;
+  }
+  .geo_number {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+  .geo_more_content h5 {
+    font-size: 21px;
   }
   .geo_plan_content h2 {
     font-size: 30px;
@@ -3699,8 +3789,29 @@ body {
 
 @media (max-width: 575px) {
   .geo_more_features {
-    padding: 20px;
-    gap: 20px;
+    padding: 18px;
+    gap: 18px;
+    border-radius: 22px;
+  }
+  .geo_more_visual {
+    min-height: 180px;
+    padding: 16px;
+    border-radius: 22px;
+  }
+  .geo_more_visual img {
+    max-width: 170px;
+  }
+  .geo_number {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  .geo_more_content h5 {
+    font-size: 20px;
+    margin: 14px 0 8px;
+  }
+  .geo_more_content p {
+    font-size: 15px;
+    line-height: 1.65;
   }
   .home_slide_box {
     flex: 0 0 50%;
@@ -4453,21 +4564,27 @@ body {
   text-fill-color: transparent;
 }
 .geo_btn_with_price {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 94px;
   background: #116bff;
   border: 1px solid #478dff;
   box-shadow:
     0px 4px 20px 0px #1875ff66,
     0px 0px 30px 0px #ffffff75 inset;
-  border-radius: 20px;
+  border-radius: 120px;
   padding: 5px 30px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   color: var(--white-color) !important;
-  gap: 30px;
+  gap: 20px;
   transition: all 0.3s ease-in-out;
   font-family: "Bricolage Grotesque", sans-serif;
   animation: glowBlink 1.5s infinite alternate;
+  overflow: hidden;
+  transform: translateZ(0);
 }
 @keyframes glowBlink {
   from {
@@ -4487,10 +4604,17 @@ body {
   padding: 5px 20px;
   border-radius: 60px;
   font-family: "Bricolage Grotesque", sans-serif;
+  transition: transform 0.3s ease;
 }
-/*.geo_btn_with_price:hover {*/
-/*  background: #170920;*/
-/*}*/
+.geo_btn_with_price:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0px 10px 28px rgba(17, 107, 255, 0.34),
+    0px 0px 30px 0px #ffffff75 inset;
+}
+.geo_btn_with_price:hover > span {
+  transform: translateY(-1px);
+}
 .geo_pymnt_cards {
   margin: 30px 0 15px 0;
 }

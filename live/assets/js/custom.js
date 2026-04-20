@@ -448,16 +448,39 @@ function initClonevoiceMetrics() {
 
     // Float bar
     float_bar: function () {
+      const body = document.body;
+      const setBodySpacing = (enabled) => {
+        if (!body) {
+          return;
+        }
+
+        if (!enabled) {
+          body.style.paddingBottom = "";
+          body.style.marginBottom = "";
+          return;
+        }
+
+        const fb = document.getElementById("floatBar");
+        const spacing = fb ? fb.offsetHeight + 16 : 16;
+        body.style.paddingBottom = `${spacing}px`;
+        body.style.marginBottom = "0";
+      };
+
       window.addEventListener(
         "scroll",
         () => {
           const fb = document.getElementById("floatBar");
           if (fb) {
-            fb.classList.toggle("visible", window.scrollY > 700);
+            const shouldShow = window.scrollY > 700;
+            fb.classList.toggle("visible", shouldShow);
+            setBodySpacing(shouldShow);
           }
         },
         { passive: true }
       );
+
+      const fb = document.getElementById("floatBar");
+      setBodySpacing(fb ? fb.classList.contains("visible") : false);
     },
     // Float bar
 

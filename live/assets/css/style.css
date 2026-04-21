@@ -1371,6 +1371,17 @@ img.powerful_bg2 {
 .generatebtn:hover svg path {
   fill: #ffffff;
 }
+
+.geo_ai_keyword_section .container-fluid {
+    max-width: 1300px!important;
+}
+.geo_ai_keyword_img {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.geo_testimonial_section .geo_ai_keyword_section {
+    padding-bottom: 80px;
+}
 /* More Features css */
 
 .geo_awesomefeatures_section {

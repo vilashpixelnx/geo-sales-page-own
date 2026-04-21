@@ -2945,6 +2945,17 @@ p.geo_tier {
 }
 
 /* Price css */
+.geo_perfect_for.newChanges {
+    box-shadow: 0px -20px 20px 0px #00000014;
+    background: #fff;
+}
+.newChanges.geo_perfect_for > p {
+    background: #0251d4;
+    color: #ffffff;
+}
+.geo_perfect_for.newChanges ul {
+    padding: 0px 10px 0 10px;
+}
 .geo_pricing_section {
   background-image: url(../images/pricing_bg.jpg);
   background-repeat: no-repeat;

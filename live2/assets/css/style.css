@@ -345,7 +345,7 @@ p {
 /* header section css start */
 .geo-header-wrapper {
   padding: 15px 0;
-  background-color: #fdfaff;
+  background-color: rgb(255 255 255 / 11%); /* vilash */
   position: fixed;
   top: 0;
   left: 0;
@@ -353,7 +353,7 @@ p {
   width: 100%;
   z-index: 99;
   transition: 0.3s;
-  box-shadow: 0px 0px 50px 0px rgb(206 165 224 / 25%);
+  /* box-shadow: 0px 0px 50px 0px rgb(206 165 224 / 25%);  */  /* vilash */
 }
 .geo-header-wrapper.geo-header-fixed {
   transition: 0.3s;
@@ -761,7 +761,7 @@ img.banner_img2 {
 }
 .geo_banner_text > h1 {
   font-size: 78px;
-  font-weight: 700;
+  font-weight: 600;
   color: #09090b;
   line-height: 1;
   position: relative;
@@ -786,10 +786,10 @@ img.banner_img2 {
 }
 .geo_banner_text > h1 span.span_normal {
 
-        /* background: linear-gradient(120deg, #09090B 0%, #2067F3 40%, #09090B 75%, #2067F3 100%);
+        background: linear-gradient(120deg, #ffffff 0%, #ffe000  40%, #ffffff 75%, #ffe000  100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text; background-size: 250% auto;
-      animation: h1Sweep 5s linear infinite alternate; */
+      animation: h1Sweep 5s linear infinite alternate;
 }
   @keyframes h1Sweep {
       0%   { background-position: 0% center; }
@@ -800,17 +800,17 @@ img.banner_img2 {
   font-weight: 500;
   line-height: 1;
   margin-bottom: 30px;
-  background: linear-gradient(89.09deg, #000000 -4.43%, #000000 110.61%);
+  background: linear-gradient(89.09deg, #ffffff -4.43%, #ffffff 110.61%); /* vilash */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Google Sans", sans-serif;
 }
 .geo_banner_text p {
-    font-size: 24px;
-    font-weight: 500;
-    color: #09090b;
-    margin: 25px 0 30px;
-    line-height: 1.4;
+  font-size: 20px;
+  font-weight: 500;
+color: #ffffff;   /* vilash */
+  margin: 15px 0 25px;
+  line-height: 1.4;
 }
 .geo_banner_text > h1 span.font_websites {
   color: #116bff;
@@ -846,16 +846,8 @@ img.banner_img2 {
     bottom: 0;
     margin: auto;
 }
-.inner_capsul_img {
-    width: 30px;
-    position: static!important;
-}
 .geo_banner_content .geo_banner_txt_gradient {
-  /* padding: 14px 25px 14px 85px; */
-  padding: 14px 25px 14px 25px;
-  display: flex;
-    align-items: center;
-    gap: 10px;
+  padding: 14px 25px 14px 85px;
 }
 .geo_banner_txt_gradient {
   border-radius: 50px;
@@ -1092,7 +1084,7 @@ min-height: inherit;
   align-items: center;
   font-size: 18px;
   font-weight: 500;
-  color: #09090b;
+  color: #ffffff; /* vilash */
 }
 
 .geo_checklist ul li img {
@@ -5261,8 +5253,7 @@ body {
     bottom: 0;
   }
   .geo_banner_content .geo_banner_txt_gradient {
-    /* padding: 14px 25px 14px 45px; */
-    padding: 14px 25px 14px 25px;
+    padding: 14px 25px 14px 45px;
   }
 }
 @media (max-width: 480px) {

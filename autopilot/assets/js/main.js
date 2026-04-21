@@ -13,6 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 // Sync GSAP ticker with native scroll
 gsap.ticker.lagSmoothing(0);
 
+initHeroBackground();
+
 /* ── 2. Reduced Motion Gate ────────────────────────────────── */
 // Skip all GSAP animations for users who prefer reduced motion.
 // Elements have no CSS opacity:0 — they are naturally visible without animation.
@@ -21,6 +23,162 @@ if (!prefersReducedMotion()) {
 }
 
 /* ── 3. Animations ─────────────────────────────────────────── */
+function initHeroBackground() {
+  const heroSection = qs('.hero');
+  const canvas = qs('#heroNoiseCanvas');
+  const stripesWrap = qs('#heroStripes');
+  const blobBlue = qs('#heroBlobBlue');
+  const blobPurple = qs('#heroBlobPurple');
+
+  if (!heroSection || !canvas || !stripesWrap || !blobBlue || !blobPurple) return;
+
+  const ctx = canvas.getContext('2d');
+  const reduced = prefersReducedMotion();
+  const leftEls = [];
+  const rightEls = [];
+
+  const drawNoise = () => {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const width = Math.max(1, window.innerWidth || 1440);
+    const height = Math.max(1, window.innerHeight || 820);
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const img = ctx.createImageData(width, height);
+    const d = img.data;
+    const fade = (t) => t * t * t * (t * (t * 6 - 15) + 10);
+    const lerp = (a, b, t) => a + (b - a) * t;
+    const hash = (x, y) => {
+      const n = Math.sin(x * 127.1 + y * 311.7) * 43758.5453;
+      return n - Math.floor(n);
+    };
+    const vNoise = (x, y) => {
+      const ix = Math.floor(x);
+      const iy = Math.floor(y);
+      const fx = x - ix;
+      const fy = y - iy;
+      return lerp(
+        lerp(hash(ix, iy), hash(ix + 1, iy), fade(fx)),
+        lerp(hash(ix, iy + 1), hash(ix + 1, iy + 1), fade(fx)),
+        fade(fy)
+      );
+    };
+    const fractal = (x, y) => {
+      let v = 0;
+      let amp = 1;
+      let freq = 3.5;
+      let sum = 0;
+      for (let o = 0; o < 4; o += 1) {
+        v += vNoise(x * freq, y * freq) * amp;
+        sum += amp;
+        amp *= 0.5;
+        freq *= 2;
+      }
+      return v / sum;
+    };
+
+    for (let y = 0; y < height; y += 1) {
+      for (let x = 0; x < width; x += 1) {
+        const v = fractal(x / width, y / height);
+        const i = (y * width + x) * 4;
+        d[i] = 196;
+        d[i + 1] = 227;
+        d[i + 2] = 255;
+        d[i + 3] = Math.round(v * 255 * 0.55);
+      }
+    }
+
+    ctx.putImageData(img, 0, 0);
+  };
+
+  const buildStripes = () => {
+    stripesWrap.innerHTML = '';
+    leftEls.length = 0;
+    rightEls.length = 0;
+
+    const COUNT = 12;
+    const MAX_W = 6.5;
+    const MIN_W = 1.83;
+    let leftPos = 0;
+    let rightPos = 0;
+
+    for (let i = 0; i < COUNT; i += 1) {
+      const t = i / (COUNT - 1);
+      const w = MAX_W - (MAX_W - MIN_W) * t;
+      const scale = 1 - 0.82 * t;
+      const a1 = (0.1 * scale).toFixed(3);
+      const a2 = (0.4 * scale).toFixed(3);
+      const bg = `linear-gradient(270deg,rgba(255,255,255,${a1}) 0%,rgba(255,255,255,${a2}) 100%)`;
+
+      const leftStripe = document.createElement('div');
+      leftStripe.className = 'hero__bgfx-stripe';
+      leftStripe.style.cssText = `left:${leftPos.toFixed(3)}%;width:${w.toFixed(3)}%;background:${bg};`;
+      stripesWrap.appendChild(leftStripe);
+      leftEls.push(leftStripe);
+      leftPos += w;
+
+      const rightStripe = document.createElement('div');
+      rightStripe.className = 'hero__bgfx-stripe';
+      rightStripe.style.cssText = `right:${rightPos.toFixed(3)}%;width:${w.toFixed(3)}%;background:${bg};`;
+      stripesWrap.appendChild(rightStripe);
+      rightEls.push(rightStripe);
+      rightPos += w;
+    }
+  };
+
+  drawNoise();
+  buildStripes();
+  window.addEventListener('resize', drawNoise, { passive: true });
+
+  if (reduced) {
+    gsap.set([blobBlue, blobPurple], { opacity: 1 });
+    gsap.set([...leftEls, ...rightEls], { opacity: 1 });
+    return;
+  }
+
+  gsap.to([blobBlue, blobPurple], {
+    opacity: 1,
+    duration: 1.6,
+    stagger: 0.15,
+    ease: 'power2.out'
+  });
+
+  gsap.from('.hero__bgfx-fade', { opacity: 0, duration: 1.0, delay: 0.3 });
+
+  gsap.to(blobBlue, {
+    x: 32,
+    y: 22,
+    scale: 1.06,
+    duration: 6,
+    repeat: -1,
+    yoyo: true,
+    ease: 'sine.inOut',
+    delay: 1.8
+  });
+
+  gsap.to(blobPurple, {
+    x: -28,
+    y: 26,
+    scale: 1.07,
+    duration: 7,
+    repeat: -1,
+    yoyo: true,
+    ease: 'sine.inOut',
+    delay: 2.1
+  });
+
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 2.2, delay: 1.4 });
+  tl.to(leftEls, { opacity: 1, duration: 0.5, stagger: 0.12, ease: 'power2.out' })
+    .to(rightEls, { opacity: 1, duration: 0.5, stagger: 0.12, ease: 'power2.out' }, '<')
+    .to({}, { duration: 0.2 })
+    .to(leftEls, { opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power2.in' })
+    .to(rightEls, { opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power2.in' }, '<');
+}
+
 function initAnimations() {
 
   /* 3.1 — Hero entrance (timeline, plays on load) */

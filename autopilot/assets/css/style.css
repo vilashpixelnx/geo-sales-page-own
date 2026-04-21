@@ -422,47 +422,101 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-image: url(../images/oto1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #f5f3ff;
 }
 
-/* Animated dot-grid overlay */
 .hero::before {
-  content: "";
+  content: none;
+}
+
+.hero__bgfx {
   position: absolute;
-  inset: -60px;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: radial-gradient(
-    circle,
-    rgba(40, 135, 255, 0.22) 1.5px,
-    transparent 1.5px
+  overflow: hidden;
+  background: #f5f3ff;
+}
+
+.hero__bgfx-blob,
+.hero__bgfx-noise,
+.hero__bgfx-stripes,
+.hero__bgfx-fade {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__bgfx-blob {
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.hero__bgfx-blob--blue {
+  width: 75%;
+  height: 65%;
+  top: -30%;
+  left: -14%;
+  background: radial-gradient(
+    ellipse at 58% 52%,
+    rgba(120, 195, 230, 0.38) 0%,
+    rgba(155, 215, 242, 0.22) 28%,
+    rgba(190, 232, 250, 0.1) 55%,
+    transparent 78%
   );
-  background-size: 36px 36px;
-  animation: grid-drift 20s linear infinite;
-  /* Fade edges so grid blends naturally */
-  -webkit-mask-image: radial-gradient(
-    ellipse 90% 80% at 50% 40%,
-    rgba(0, 0, 0, 0.5) 30%,
-    rgba(0, 0, 0, 0) 100%
+  transform: rotate(-8.58deg);
+}
+
+.hero__bgfx-blob--purple {
+  width: 75%;
+  height: 68%;
+  top: -28%;
+  right: -12%;
+  background: radial-gradient(
+    ellipse at 42% 52%,
+    rgba(148, 132, 215, 0.35) 0%,
+    rgba(175, 162, 228, 0.2) 28%,
+    rgba(205, 198, 240, 0.09) 55%,
+    transparent 78%
   );
-  mask-image: radial-gradient(
-    ellipse 90% 80% at 50% 40%,
-    rgba(0, 0, 0, 0.5) 30%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  transform: rotate(9.94deg);
+}
+
+.hero__bgfx-noise {
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.hero__bgfx-stripes {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero__bgfx-stripe {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.hero__bgfx-fade {
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(245, 243, 255, 0) 0%, #f5f3ff 100%);
+  pointer-events: none;
 }
 
 .hero__glow-1,
 .hero__glow-2,
 .hero__glow-3 {
-  position: absolute;
-  pointer-events: none;
-  border-radius: 50%;
-  filter: blur(90px);
-  z-index: 0;
+  display: none;
 }
 
 .hero__glow-1 {
@@ -760,7 +814,7 @@ body {
     margin-top: 20px;
 }
 
-@media (min-width: 640px) { 
+@media (min-width: 640px) {
   .problem-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1185,71 +1239,64 @@ section#proof {
   padding: 80px 0;
 }
 .geo_tesmnl_slider_parent {
-    position: relative;
+  position: relative;
 }
 .slider {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin-top: 40px;
 }
 
 .geo_tesmnl_slider_parent::before,
 .geo_tesmnl_slider_parent::after {
-  content: "";
-  background: linear-gradient(90deg, #1e1334 -2%, rgba(30, 19, 52, 0) 82.45%);
-  width: 190px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-.geo_tesmnl_slider_parent::before {
-  left: 0;
-}
-.geo_tesmnl_slider_parent::after {
-  right: 0;
-  transform: rotate(180deg);
+  display: none;
 }
 
 .slide-track {
-  display: flex;
-  width: calc(320px * 10);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .card {
   width: 100%;
-  max-width: 620px;
-  margin: 0 20px;
+  margin: 0;
   background: #fff;
   border-radius: 18px;
-  flex-shrink: 0;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Animation Left Direction */
-.left {
-  animation: scrollLeft 30s linear infinite;
-}
-
-/* Animation Right Direction */
+/* Static testimonial grid */
+.left,
 .right {
-  animation: scrollRight 30s linear infinite;
+  animation: none !important;
+  transform: none !important;
 }
 
-@keyframes scrollLeft {
-  100% {
-    transform: translateX(calc(-320px * 5));
+.geo_tesmnl_slider_parent .slider + .slider {
+  display: none;
+}
+
+
+
+@media (max-width: 991px) {
+  .slide-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 }
 
-@keyframes scrollRight {
-  0% {
-    transform: translateX(calc(-320px * 5));
+@media (max-width: 575px) {
+  .slide-track {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    justify-items: center;
   }
-  100% {
-    transform: translateX(0);
+
+  .card {
+    max-width: 560px;
   }
 }
 /* testimonial css */

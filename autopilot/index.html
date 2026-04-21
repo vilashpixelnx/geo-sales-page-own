@@ -137,6 +137,13 @@
          HERO
     ═══════════════════════════════════════════════════ -->
     <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__bgfx" aria-hidden="true">
+        <div class="hero__bgfx-blob hero__bgfx-blob--blue" id="heroBlobBlue"></div>
+        <div class="hero__bgfx-blob hero__bgfx-blob--purple" id="heroBlobPurple"></div>
+        <canvas id="heroNoiseCanvas" class="hero__bgfx-noise"></canvas>
+        <div class="hero__bgfx-stripes" id="heroStripes"></div>
+        <div class="hero__bgfx-fade"></div>
+      </div>
       <div class="hero__glow-1" aria-hidden="true"></div>
       <div class="hero__glow-2" aria-hidden="true"></div>
       <div class="hero__glow-3" aria-hidden="true"></div>
@@ -260,7 +267,7 @@
             every single week. Forever.
           </p>
         </div>
-        
+
         <div class="problem_img_wr">
             <img src="assets/images/problem_img.png" alt="image">
         </div>
@@ -495,38 +502,22 @@
          SOCIAL PROOF — dark section
     ═══════════════════════════════════════════════════ -->
     <section class="section section--dark" id="proof" aria-labelledby="proof-heading">
-      <div class="container-fluid">
+      <div class="container-fluid" style="max-width: 1500px;margin: auto;padding: 0 15px;">
 
         <div class="section-header">
           <span class="section-badge section-badge--light">Real Customer</span>
           <h2 class="section-title section-title--light" id="proof-heading">What Our Customers Say</h2>
         </div>
 
-        <!--<div class="testimonial-card">-->
-        <!--  <div class="testimonial-card__avatar" aria-hidden="true">D</div>-->
-        <!--  <div>-->
-        <!--    <p class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</p>-->
-        <!--    <blockquote class="testimonial-card__quote">-->
-        <!--      "I manage 8 client sites. The moment I saw AutoPilot I upgraded immediately.-->
-        <!--      Scheduling stale-post re-optimization alone saves me 3–4 hours a week.-->
-        <!--      The weekly email report is what my clients see — they think I'm running a-->
-        <!--      full AI optimization service. I am. This plugin is doing it."-->
-        <!--    </blockquote>-->
-        <!--    <p class="testimonial-card__meta">-->
-        <!--      <strong>Daniel R.</strong> — WordPress Consultant &amp; Agency Owner · Verified Buyer-->
-        <!--    </p>-->
-        <!--  </div>-->
-        <!--</div>-->
-        
+
         <div class="geo_tesmnl_slider_parent">
-          <!-- Row 1 -->
           <div class="slider">
-            <div class="slide-track left">
+            <div class="slide-track">
               <div class="card">
                 <div class="el_testimonials_box">
                   <h4>Rachel T., Health & Wellness Blogger</h4>
                   <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
+                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
                 </div>
               </div>
               <div class="card">
@@ -540,14 +531,14 @@
                 <div class="el_testimonials_box">
                   <h4>Priya M., E-commerce Store Owner</h4>
                   <img src="assets/images/rating.png" alt="image">
-                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
+                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve it just runs on schedule and my citation rates stay strong month after month.</p>
                 </div>
               </div>
               <div class="card">
                 <div class="el_testimonials_box">
                   <h4>Tom H., Affiliate Marketer</h4>
                   <img src="assets/images/rating.png" alt="image">
-                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
+                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly scheduled re-optimization means I'm always current, always competitive.</p>
                 </div>
               </div>
               <div class="card">
@@ -561,151 +552,12 @@
                 <div class="el_testimonials_box">
                   <h4>Daniel R., SEO Agency Owner</h4>
                   <img src="assets/images/rating.png" alt="image">
-                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
+                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
                 </div>
               </div>
-
-              <!-- duplicate -->
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Rachel T., Health & Wellness Blogger</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>James K., Digital Marketing Consultant</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Priya M., E-commerce Store Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Tom H., Affiliate Marketer</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Linda C., Local Business Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Daniel R., SEO Agency Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <!-- Row 2 -->
-          <div class="slider">
-            <div class="slide-track right">
-
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Rachel T., Health & Wellness Blogger</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>James K., Digital Marketing Consultant</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Priya M., E-commerce Store Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Tom H., Affiliate Marketer</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Linda C., Local Business Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Daniel R., SEO Agency Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
-                </div>
-              </div>
-
-              <!-- duplicate -->
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Rachel T., Health & Wellness Blogger</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>James K., Digital Marketing Consultant</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Priya M., E-commerce Store Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Tom H., Affiliate Marketer</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Linda C., Local Business Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="el_testimonials_box">
-                  <h4>Daniel R., SEO Agency Owner</h4>
-                  <img src="assets/images/rating.png" alt="image">
-                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -853,7 +705,7 @@
     <section class="section section--lavender" id="countdown-section" aria-label="Limited time offer">
       <div class="container container--center">
 
-        
+
         <div class="section-header geo_product_wrapper">
           <div class="geo_product_box">
             <img src="assets/images/product_box.png" alt="Product">
@@ -1083,3 +935,5 @@
 </body>
 
 </html>
+
+

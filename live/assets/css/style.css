@@ -3331,6 +3331,14 @@ img.faq_icon4 {
 }
 /* Slider Section CSS */
 
+/* bounus  css */
+.row-reverse {
+    flex-direction: row-reverse;
+}
+.own_bonus{
+  padding-bottom: 30px;
+}
+/* bounus  css */
 /* Footer css */
 .geo_footer_section {
   position: relative;
@@ -4065,7 +4073,7 @@ body {
   padding: 0 0 80px;
 }
 .geo_tab_wrapper.geo_inside_wrapper {
-  padding: 80px 0 0;
+  padding: 80px 0;
 }
 .geo_tab_wrapper .geo_work_content {
   border: 1px solid #e8dfff;

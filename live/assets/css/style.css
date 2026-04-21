@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Google Sans", sans-serif;
   background-color: var(--white-color);
+    overflow: hidden auto;
 }
 html {
   scroll-behavior: smooth;
@@ -3634,6 +3635,28 @@ body {
   }
 }
 
+@media (max-width: 1300px) {
+  .home_template_wrapper {
+            display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+  }
+  .home_template_wrapper.aif-chatbot-tesmnl-slider {
+    animation: none !important;
+    transform: none !important;
+  }
+  .home_slide_box {
+    flex: 0 0 auto;
+    max-width: 280px;
+    width: 100%;
+  }
+  .home_slide_box img {
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+  }
+}
+
 @media (max-width: 991px) {
   .geo_banner_text > h1 {
     font-size: 34px;
@@ -3836,9 +3859,6 @@ body {
   .geo_more_content p {
     font-size: 15px;
     line-height: 1.65;
-  }
-  .home_slide_box {
-    flex: 0 0 50%;
   }
   .home_template_mini .home_slide_box {
     flex: 0 0 80%;
@@ -5422,6 +5442,10 @@ body {
 }
 
 @media (max-width: 575px) {
+      .geo_banner_watch_vector {
+        width: 57px;
+        top: 0;
+    }
   .geo_after_before {
     margin: 24px auto 0;
     padding: 0 12px;
@@ -5448,6 +5472,7 @@ body {
   }
 }
 
+
 @media (max-width: 480px) {
   .geo_step_card {
     padding: 20px 16px;
@@ -5464,6 +5489,13 @@ body {
     }
         .ma_video_wrapper {
         max-width: 90%;
+    }
+}
+@media (max-width: 420px) {
+      .geo_banner_watch_vector {
+        width: 37px;
+        top: -20px;
+        left: -27px;
     }
 }
 /* ===== geo_after_before CSS End ===== */

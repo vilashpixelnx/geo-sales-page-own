@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <title>WAIT — Upgrade to GEO Optimizer AutoPilot | Hands-Free AI Optimization</title>
+
+  <!-- Fonts: Bricolage Grotesque (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets — load order: reset → style → animation -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YNPJHHHLH"></script>
+  <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-1YNPJHHHLH'); </script>
+  <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '212563324850714');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=212563324850714&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+  <!-- OTO1-specific overrides -->
+  <style>
+    /* ── Header — OTO1 override ──────────────────────────────── */
+    .site-header {
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    /* Rainbow gradient accent line at the very top */
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-rainbow);
+      z-index: 1;
+    }
+
+    /* Announcement-style badge for the header tag */
+    .site-header__tag {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, rgba(40, 135, 255, 0.06), rgba(34, 207, 255, 0.06));
+      border: 1px solid rgba(40, 135, 255, 0.18);
+      border-radius: 40px;
+      padding: 6px 18px 6px 8px;
+      font-size: 13px;
+      font-weight: var(--fw-semibold);
+      color: var(--color-text);
+      flex: unset;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .site-header__tag {
+        display: inline-flex;
+      }
+    }
+
+    .site-header__tag::before {
+      content: '⚡';
+      font-size: 15px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .site-header__tag strong {
+      background: var(--grad-rainbow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: var(--fw-bold);
+    }
+
+    /* Tighter hero top so content is closer to fold */
+    .hero {
+      padding-top: clamp(48px, 6vw, 80px);
+    }
+  </style>
+
+  <!-- GSAP core + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+
+  <!-- Project scripts -->
+  <script src="assets/js/utils.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a href="#hero" class="site-header__logo" aria-label="GEO Optimizer — back to top">
+        <img src="assets/images/logo.svg" alt="GEO Optimizer" width="160" height="35" class="site-header__logo-img">
+      </a>
+      <p class="site-header__tag">
+        Special One-Time Upgrade Offer —&nbsp;<strong>This Page Appears Once Only</strong>
+      </p>
+      <a href="https://www.jvzoo.com/b/115893/437969/1" class="btn-primary" rel="noopener noreferrer" aria-label="Add AutoPilot for just $67"
+        style="height: 40px;translate: none; rotate: none; scale: none; box-shadow: rgba(40, 135, 255, 0.4) 0px 4px 20px 0px; transform: translate(0px, 0px);">
+        <span class="btn-primary__label">Get Instant Access</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__glow-1" aria-hidden="true"></div>
+      <div class="hero__glow-2" aria-hidden="true"></div>
+      <div class="hero__glow-3" aria-hidden="true"></div>
+      <div class="container hero__inner">
+
+        <!-- Badge -->
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          AutoPilot Upgrade — One-Time Offer
+        </div>
+
+        <!-- Heading -->
+        <h1 class="hero__heading" id="hero-heading">
+          You Just Got GEO Optimizer.<br>
+          Now Let It Run <span class="gradient-text">Itself.</span>
+        </h1>
+
+        <!-- Sub -->
+        <p class="hero__sub">
+          You've unlocked the power to get cited by ChatGPT, Claude &amp; Perplexity.
+          This one-time upgrade puts it on <strong>complete autopilot</strong> — so you
+          never have to think about it again.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero__ctas">
+          <a href="#final-cta" class="btn-primary" rel="noopener noreferrer"
+            aria-label="Yes, activate AutoPilot now for $67">
+            <span class="btn-primary__label">Get Instant Access </span>
+            <span class="btn-primary__price" aria-label="47 dollars">$67</span>
+          </a>
+          <a href="#includes" class="btn-outline">See What's Included</a>
+        </div>
+
+        <!-- Social proof -->
+        <div class="ma_user_list hero__proof">
+          <ul>
+            <li><img src="assets/images/1.jpg" alt="image"></li>
+            <li><img src="assets/images/2.jpg" alt="image"></li>
+            <li><img src="assets/images/3.jpg" alt="image"></li>
+            <li><span>★★★★★ 4.9/5</span><br> from 300+ customers</li>
+          </ul>
+        </div>
+
+        <!-- Trust strip -->
+        <div class="hero__trust" aria-label="Trust signals">
+          <span class="hero__trust-item">
+            <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="8" fill="#00c853" />
+              <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Works with any WordPress theme
+          </span>
+          <span class="hero__trust-item">
+            <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="8" fill="#00c853" />
+              <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            14-Day Money Back Guarantee
+          </span>
+          <span class="hero__trust-item">
+            <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="8" fill="#00c853" />
+              <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            One-time payment — no subscription ever
+          </span>
+        </div>
+
+        <!-- Skip -->
+        <!--<a href="https://www.jvzoo.com/nothanks/437969" class="btn-skip" id="skip-btn"-->
+        <!--  aria-label="No thanks, decline this offer">No thanks — I'll manage re-optimization manually</a>-->
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         BRIDGE / TRANSITION
+    ═══════════════════════════════════════════════════ -->
+    <section class="bridge section" id="bridge" aria-label="Congratulations message" style="
+    display: none;
+">
+      <div class="container">
+        <div class="bridge__box">
+          <div class="bridge__emoji-wrap" aria-hidden="true">🎉</div>
+          <div class="bridge__content">
+            <h2 class="bridge__heading">
+              Congratulations — GEO Optimizer is on its way to your inbox right now.
+            </h2>
+            <p class="bridge__body">
+              Your site is about to become AI-readable. You're ahead of 99% of WordPress
+              owners who still have no idea this problem exists.<br><br>
+              But here's the truth: <strong>GEO optimization isn't a one-time fix.</strong>
+              AI crawlers re-index continuously. Your content ages. New posts go live
+              without AI-ready structure. Without ongoing re-optimization, your citation
+              advantage quietly erodes — week by week, post by post.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PROBLEM — Manual Re-Optimization
+    ═══════════════════════════════════════════════════ -->
+    <section class="section" id="problem" aria-labelledby="problem-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <!--<span class="section-badge section-badge--red">The Problem With Manual</span>-->
+          <h2 class="section-title" id="problem-heading">
+            GEO Optimizer is Powerful.<br>
+            But <span class="gradient-text--red">You Shouldn't</span> Have to Run It.
+          </h2>
+          <p class="section-subtext">
+            Without AutoPilot, staying fully optimised means logging in, checking stale posts,
+            re-running the AI Writer, refreshing your llms.txt, and reviewing performance —
+            every single week. Forever.
+          </p>
+        </div>
+        
+        <div class="problem_img_wr">
+            <img src="assets/images/problem_img.png" alt="image">
+        </div>
+
+        <div class="problem-grid problem-grid-flex" id="problem-grid">
+
+          <div class="problem-card">
+            <img src="assets/images/manual1.png" class="problem-card__icon" alt="image">
+            <div class="problem-card-title">
+                <h3 class="problem-card__title">Manually checking which posts have gone stale</h3>
+                <p class="problem-card__body">
+                  Content older than 30, 60, or 90 days drifts out of AI-readiness.
+                  Tracking this across 50–200 posts is a spreadsheet nightmare.
+                </p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <img src="assets/images/manual2.png" class="problem-card__icon" alt="image">
+            <div class="problem-card-title">
+                <h3 class="problem-card__title">Re-running the AI Writer post by post</h3>
+                <p class="problem-card__body">
+                  New posts go live without FAQs, Answer Capsules, or schema structure.
+                  Every one is a missed citation opportunity until you catch it.
+                </p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <img src="assets/images/manual3.png" class="problem-card__icon" alt="image">
+            <div class="problem-card-title">
+                <h3 class="problem-card__title">Remembering to refresh your llms.txt</h3>
+                <p class="problem-card__body">
+                  Your llms.txt becomes outdated the moment you publish new content.
+                  An outdated AI priority index = invisible new pages.
+                </p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <img src="assets/images/manual4.png" class="problem-card__icon" alt="image">
+            <div class="problem-card-title">
+                <h3 class="problem-card__title">No visibility into whether it's working</h3>
+                <p class="problem-card__body">
+                  Without a performance report, you're flying blind. You don't know if
+                  your GEO score is rising, falling, or flatlining.
+                </p>
+            </div>
+          </div>
+
+        </div>
+
+        <blockquote class="pain-pull">
+          "You didn't invest in GEO Optimizer to create a new weekly chore.<br>
+          You invested in it to <span>get traffic without the grind.</span>"
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SOLUTION — AutoPilot Features
+    ═══════════════════════════════════════════════════ -->
+    <section class="section solution" id="solution" aria-labelledby="solution-heading">
+      <div class="container">
+
+        <div class="autopilot-product">
+          <div class="autopilot-product__icon" aria-hidden="true">
+              <img src="assets/images/robot_icon.png" alt="image">
+          </div>
+          <div>
+            <p class="autopilot-product__name">GEO Optimizer AutoPilot</p>
+            <p class="autopilot-product__subtitle">Upgrade · One-Time Only</p>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title" id="solution-heading">
+            Set It. Forget It.<br>
+            <span class="gradient-text">Let It Run While You Sleep.</span>
+          </h2>
+          <p class="section-subtext">
+            AutoPilot is the engine layer that runs beneath GEO Optimizer — silently
+            re-optimizing, refreshing, and reporting so your AI citations compound
+            over time without you lifting a finger.
+          </p>
+        </div>
+
+        <div class="feature-grid" id="feature-grid">
+
+          <div class="feature-card">
+            <img src="assets/images/01.png" class="feature-card__emoji" alt="image">
+            <span class="feature-card__badge">Automation</span>
+            <h3 class="feature-card__title">Scheduled Re-Optimisation — Daily, Weekly, or Monthly</h3>
+            <p class="feature-card__body">
+              Choose your cadence per site. AutoPilot quietly runs the AI Writer on
+              a schedule you control — daily for fast-moving content sites, weekly for
+              blogs, monthly for static business sites. Configure once. Runs forever.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/images/02.png" class="feature-card__emoji" alt="image">
+            <span class="feature-card__badge feature-card__badge--orange">Smart Detection</span>
+            <h3 class="feature-card__title">Auto Re-Optimise Stale Posts — Triggered by Age</h3>
+            <p class="feature-card__body">
+              Set a threshold — 30, 60, or 90 days — and AutoPilot automatically
+              runs the AI Writer on any post that's grown stale. No manual checking.
+              No missed posts. Every page stays AI-ready, always.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/images/03.png" class="feature-card__emoji" alt="image">
+            <span class="feature-card__badge feature-card__badge--green">Always Current</span>
+            <h3 class="feature-card__title">Auto llms.txt Refresh on Every Content Change</h3>
+            <p class="feature-card__body">
+              The moment you publish a new post, AutoPilot rebuilds your llms.txt
+              automatically. Your AI priority index is always up to date — giving AI
+              crawlers an accurate, complete map of your best content, instantly.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/images/04.png" class="feature-card__emoji" alt="image">
+            <span class="feature-card__badge feature-card__badge--purple">Performance Intel</span>
+            <h3 class="feature-card__title">Weekly GEO Performance Report — Delivered to Your Inbox</h3>
+            <p class="feature-card__body">
+              Every week, AutoPilot emails you a clear GEO performance summary:
+              which posts were re-optimised, your site's GEO score trend, and what
+              changed. No logging in. Just visibility, on autopilot.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/images/05.png" class="feature-card__emoji" alt="image">
+            <span class="feature-card__badge">Full Control</span>
+            <h3 class="feature-card__title">AutoPilot Settings Panel — Schedule, Limits &amp; Recipients</h3>
+            <p class="feature-card__body">
+              A dedicated control panel inside your WordPress dashboard. Set your
+              optimization schedule, define post limits per run, choose your email
+              report recipient — everything from one clean interface.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         BEFORE / AFTER — dark section
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--dark" id="ba" aria-labelledby="ba-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge section-badge--light">Life With vs Without AutoPilot</span>
+          <h2 class="section-title section-title--light" id="ba-heading">
+            Your Site — <em>Active</em> vs <span class="gradient-text">On Autopilot</span>
+          </h2>
+        </div>
+
+        <div class="ba-grid">
+
+          <div class="ba-card ba-card--before">
+            <p class="ba-card__label">Without AutoPilot</p>
+            <ul class="ba-list" aria-label="Without AutoPilot list">
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✗</span>
+                Manually check stale posts every week
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✗</span>
+                Forget to re-run AI Writer on new content
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✗</span>
+                llms.txt goes out of date with every publish
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✗</span>
+                No idea if GEO score is rising or falling
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✗</span>
+                Optimization fades as your site grows
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✗</span>
+                Another thing on the to-do list. Forever.
+              </li>
+            </ul>
+          </div>
+
+          <div class="ba-card ba-card--after">
+            <p class="ba-card__label">With AutoPilot</p>
+            <ul class="ba-list" aria-label="With AutoPilot list">
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✓</span>
+                Stale posts re-optimised automatically on schedule
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✓</span>
+                New content AI-ready before the crawlers arrive
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✓</span>
+                llms.txt refreshes the moment content changes
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✓</span>
+                Weekly report lands in your inbox every Monday
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✓</span>
+                Optimization compounds as your site grows
+              </li>
+              <li class="ba-list__item">
+                <span class="ba-list__icon" aria-hidden="true">✓</span>
+                Zero ongoing effort. Just results.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SOCIAL PROOF — dark section
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--dark" id="proof" aria-labelledby="proof-heading">
+      <div class="container-fluid">
+
+        <div class="section-header">
+          <span class="section-badge section-badge--light">Real Customer</span>
+          <h2 class="section-title section-title--light" id="proof-heading">What Our Customers Say</h2>
+        </div>
+
+        <!--<div class="testimonial-card">-->
+        <!--  <div class="testimonial-card__avatar" aria-hidden="true">D</div>-->
+        <!--  <div>-->
+        <!--    <p class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</p>-->
+        <!--    <blockquote class="testimonial-card__quote">-->
+        <!--      "I manage 8 client sites. The moment I saw AutoPilot I upgraded immediately.-->
+        <!--      Scheduling stale-post re-optimization alone saves me 3–4 hours a week.-->
+        <!--      The weekly email report is what my clients see — they think I'm running a-->
+        <!--      full AI optimization service. I am. This plugin is doing it."-->
+        <!--    </blockquote>-->
+        <!--    <p class="testimonial-card__meta">-->
+        <!--      <strong>Daniel R.</strong> — WordPress Consultant &amp; Agency Owner · Verified Buyer-->
+        <!--    </p>-->
+        <!--  </div>-->
+        <!--</div>-->
+        
+        <div class="geo_tesmnl_slider_parent">
+          <!-- Row 1 -->
+          <div class="slider">
+            <div class="slide-track left">
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Rachel T., Health & Wellness Blogger</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>James K., Digital Marketing Consultant</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Priya M., E-commerce Store Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Tom H., Affiliate Marketer</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Linda C., Local Business Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Daniel R., SEO Agency Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
+                </div>
+              </div>
+
+              <!-- duplicate -->
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Rachel T., Health & Wellness Blogger</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>James K., Digital Marketing Consultant</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Priya M., E-commerce Store Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Tom H., Affiliate Marketer</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Linda C., Local Business Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Daniel R., SEO Agency Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="slider">
+            <div class="slide-track right">
+
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Rachel T., Health & Wellness Blogger</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>James K., Digital Marketing Consultant</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Priya M., E-commerce Store Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Tom H., Affiliate Marketer</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Linda C., Local Business Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Daniel R., SEO Agency Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
+                </div>
+              </div>
+
+              <!-- duplicate -->
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Rachel T., Health & Wellness Blogger</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer already took me from 3 AI citations a day to 19. AutoPilot keeps that momentum going by re-optimizing on a schedule — so my numbers don't slip when AI engines update their ranking signals. It's like locking in your gains.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>James K., Digital Marketing Consultant</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer delivers real results for my clients from day one. AutoPilot just means those results compound over time without me lifting a finger. Monthly re-optimization keeps every site at peak AI readiness, not just at launch.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Priya M., E-commerce Store Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>The base plugin optimized my product pages brilliantly. AutoPilot means I never have to think about re-doing it when AI engines evolve — it just runs on schedule and my citation rates stay strong month after month.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Tom H., Affiliate Marketer</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I saw huge results with GEO Optimizer across my 8 niche sites. AutoPilot is what keeps those results from decaying. AI search changes constantly — scheduled re-optimization means I'm always current, always competitive.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Linda C., Local Business Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer got me appearing in Perplexity and Google AI answers within two weeks. AutoPilot means I stay there. It re-runs the optimization automatically so I'm never falling behind while competitors catch up.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Daniel R., SEO Agency Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>My clients are already thrilled with what GEO Optimizer delivers. AutoPilot is the upsell that sells itself — I show them a scheduled optimization calendar and they see it as a managed service, not a one-off tool.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         WHAT YOU GET — lavender + CTA box
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--lavender" id="includes" aria-labelledby="includes-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">Everything Included</span>
+          <h2 class="section-title" id="includes-heading">
+            Your Complete <span class="gradient-text">AutoPilot</span> Upgrade
+          </h2>
+        </div>
+
+        <ul class="checklist" id="checklist" aria-label="AutoPilot upgrade inclusions">
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Scheduled Re-Optimisation</strong> — daily, weekly, or monthly, per site</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Auto Stale Post Detection</strong> — AI Writer triggers on content older than X days</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Auto llms.txt Refresh</strong> — updates instantly whenever content changes</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Weekly GEO Performance Report</strong> — delivered to your inbox every week</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>AutoPilot Settings Panel</strong> — full control over schedule, limits &amp; recipients</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Future upgrades</strong> — pay once, all future AutoPilot updates free forever</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Works on all sites</strong> licensed under your GEO Optimizer plan</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>14-Day money-back guarantee</strong> — zero risk</p>
+          </li>
+        </ul>
+
+        <div class="cta-box" id="cta-box-includes">
+          <p class="cta-box__heading">
+            Ready to put your AI optimization on<br>
+            <span class="gradient-text">complete autopilot?</span>
+          </p>
+          <a href="#final-cta" class="btn-primary" rel="noopener noreferrer"
+            aria-label="Activate AutoPilot now for $67">
+            <span class="btn-primary__label">Get Instant Access </span>
+            <span class="btn-primary__price" aria-label="47 dollars">$67</span>
+          </a>
+          <div class="cta-box__skip">
+            <p class="cta-box__note">One-time payment · No subscription ever</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         GUARANTEE
+    ═══════════════════════════════════════════════════ -->
+    <section class="section" id="guarantee" aria-labelledby="guarantee-heading">
+      <div class="container">
+
+        <!-- <div class="guarantee-box">
+          <div class="guarantee-box__badge" aria-label="14-day money back guarantee">
+            <img src="assets/images/guarantee-img.png" alt="image">
+          </div>
+          <h2 class="section-title" id="guarantee-heading">
+            Zero Risk. Full Refund. No Questions.
+          </h2>
+          <p class="guarantee-box__body">
+            AutoPilot is covered by the same 14-day no-questions-asked money-back
+            guarantee as GEO Optimizer. If you're not satisfied for any reason within
+            14 days of upgrading, email us for a full refund on the AutoPilot upgrade.
+            You keep GEO Optimizer regardless.
+          </p>
+          <div class="guarantee-items">
+            <div class="guarantee-item">
+              <span class="guarantee-item__icon" aria-hidden="true">✓</span>
+              <p>Full refund within 14 days, no questions asked</p>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-item__icon" aria-hidden="true">✓</span>
+              <p>Keep GEO Optimizer even if you refund AutoPilot</p>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-item__icon" aria-hidden="true">✓</span>
+              <p>Instant refund processing via JVZoo</p>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-item__icon" aria-hidden="true">✓</span>
+              <p>No hoops, no support tickets, no delays</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="geo_guarntee_box text-center">
+          <img src="assets/images/guarantee-img.png" alt="Image">
+          <h2 class="section-title" id="guarantee-heading">
+            Zero Risk. Full Refund.<br> No Questions.
+          </h2>
+          <p>AutoPilot is covered by the same 14-day no-questions-asked money-back guarantee as GEO Optimizer. If you're
+            not satisfied for any reason within 14 days of upgrading, email us for a full refund on the AutoPilot
+            upgrade. You keep GEO Optimizer regardless.</p>
+          <div class="geo_guarntee_bulelts d-flex justify-content-between">
+            <ul>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>Full refund within 14 days, no questions asked</p>
+              </li>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>Instant refund processing via JVZoo</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>Keep GEO Optimizer even if you refund AutoPilot</p>
+              </li>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>No hoops, no support tickets, no delays</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         COUNTDOWN + CTA — lavender
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--lavender" id="countdown-section" aria-label="Limited time offer">
+      <div class="container container--center">
+
+        
+        <div class="section-header geo_product_wrapper">
+          <div class="geo_product_box">
+            <img src="assets/images/product_box.png" alt="Product">
+          </div>
+          <div class="geo_product_content">
+            <span class="section-badge section-badge--red">⏰ This Offer Expires When You Leave</span>
+            <h2 class="section-title">This Upgrade Will Not Appear Again</h2>
+            <p class="section-subtext">Once you leave this page, this offer is gone forever. It's the only time this upgrade is available at this price.</p>
+          </div>
+        </div>
+
+        <!--<div class="countdown" id="countdown" aria-label="Countdown timer" role="timer">-->
+        <!--  <div class="countdown__block">-->
+        <!--    <div class="countdown__digit timer_hours">00</div>-->
+        <!--    <span class="countdown__label">Hours</span>-->
+        <!--  </div>-->
+        <!--  <span class="countdown__sep" aria-hidden="true">:</span>-->
+        <!--  <div class="countdown__block">-->
+        <!--    <div class="countdown__digit timer_minutes">15</div>-->
+        <!--    <span class="countdown__label">Mins</span>-->
+        <!--  </div>-->
+        <!--  <span class="countdown__sep" aria-hidden="true">:</span>-->
+        <!--  <div class="countdown__block">-->
+        <!--    <div class="countdown__digit timer_seconds">00</div>-->
+        <!--    <span class="countdown__label">Secs</span>-->
+        <!--  </div>-->
+        <!--</div>-->
+
+        <!--<p class="urgency-note countdown-section__note">⚠ One-time offer only — expires when you leave this page</p>-->
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FAQ — lavender
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--lavender" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid" id="faq-grid">
+
+          <div class="faq-item" id="faq-1">
+            <button class="faq-item__toggle" aria-expanded="false" aria-controls="faq-1-answer">
+              <span class="faq-item__question">What exactly does AutoPilot do?</span>
+              <span class="faq-item__chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-item__answer" id="faq-1-answer" role="region">
+              <p class="faq-item__answer-inner">
+                AutoPilot is a background automation layer for GEO Optimizer. It runs
+                the AI Writer on a schedule you choose, detects stale posts and refreshes
+                them, rebuilds your llms.txt whenever you publish new content, and sends
+                you a weekly performance report. Everything happens automatically.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-2">
+            <button class="faq-item__toggle" aria-expanded="false" aria-controls="faq-2-answer">
+              <span class="faq-item__question">Does AutoPilot require any technical setup?</span>
+              <span class="faq-item__chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-item__answer" id="faq-2-answer" role="region">
+              <p class="faq-item__answer-inner">
+                No. AutoPilot adds a settings panel to your WordPress dashboard. You set
+                your schedule, define your preferences, and it runs. There's no server
+                configuration, no cron job setup, and no developer needed.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-3">
+            <button class="faq-item__toggle" aria-expanded="false" aria-controls="faq-3-answer">
+              <span class="faq-item__question">Is this a subscription? Will I be billed again?</span>
+              <span class="faq-item__chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-item__answer" id="faq-3-answer" role="region">
+              <p class="faq-item__answer-inner">
+                No. AutoPilot is a one-time payment of $67. There is no subscription, no
+                monthly fee, and no renewal. You pay once and have access to
+                AutoPilot and all future AutoPilot updates, forever.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-4">
+            <button class="faq-item__toggle" aria-expanded="false" aria-controls="faq-4-answer">
+              <span class="faq-item__question">How many sites does AutoPilot work on?</span>
+              <span class="faq-item__chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-item__answer" id="faq-4-answer" role="region">
+              <p class="faq-item__answer-inner">
+                AutoPilot works on all sites covered by your GEO Optimizer license. If
+                your GEO Optimizer plan covers 3 sites, AutoPilot runs on all 3. If you're
+                on an unlimited license, AutoPilot runs on unlimited sites.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-5">
+            <button class="faq-item__toggle" aria-expanded="false" aria-controls="faq-5-answer">
+              <span class="faq-item__question">What if I want to cancel or get a refund?</span>
+              <span class="faq-item__chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-item__answer" id="faq-5-answer" role="region">
+              <p class="faq-item__answer-inner">
+                AutoPilot is covered by a 14-day no-questions-asked money-back guarantee.
+                If you're not completely satisfied within 14 days of purchase, email us
+                for a full refund. You keep GEO Optimizer regardless.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-6">
+            <button class="faq-item__toggle" aria-expanded="false" aria-controls="faq-6-answer">
+              <span class="faq-item__question">Can I get this offer later if I say no now?</span>
+              <span class="faq-item__chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-item__answer" id="faq-6-answer" role="region">
+              <p class="faq-item__answer-inner">
+                No. This is a one-time offer exclusively available to new GEO Optimizer
+                customers. If you leave this page without upgrading, the $67 price is gone.
+                AutoPilot may be available later at a higher price or as a subscription.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════════════════ -->
+    <section class="section final-cta" id="final-cta" aria-labelledby="final-cta-heading">
+      <div class="container">
+
+        <div class="cta-box">
+          <span class="section-badge section-badge--orange">Last Chance — This Offer Disappears When You Leave</span>
+          <h2 class="cta-box__heading" id="final-cta-heading">
+            GEO Optimizer works when you run it.<br>
+            <span class="gradient-text">AutoPilot works when you don't.</span>
+          </h2>
+          <p class="section-subtext">
+            You've already made the smart move. This upgrade simply removes the last thing
+            standing between you and truly hands-free AI search traffic.
+          </p>
+          <a href="https://www.jvzoo.com/b/115893/437969/1"><img src="https://i.jvzoo.com/115893/437969/1"
+              alt="GEO Optimizer AutoPilot" border="0" /></a>
+          <div class="trust-row" aria-label="Trust signals">
+            <span class="trust-row__item">🔒 Secure via JVZoo</span>
+            <span class="trust-row__item">⚡ Instant Access</span>
+            <span class="trust-row__item">🛡️ 14-Day Guarantee</span>
+            <span class="trust-row__item">
+              <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <circle cx="8" cy="8" r="8" fill="#00c853"></circle>
+                <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg> One-Time Payment · No Subscription</span>
+          </div>
+          <div class="cta-box__skip">
+            <a href="https://www.jvzoo.com/nothanks/437969" class="btn-skip" id="skip-btn"
+              aria-label="No thanks, decline this offer">No thanks — I prefer to do this manually</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER — dark
+  ═══════════════════════════════════════════════════ -->
+  <footer class="site-footer section--dark" id="footer">
+    <div class="container">
+
+      <h2 class="site-footer__disclaimer-title">Important Disclaimer</h2>
+
+      <p class="site-footer__disclaimer">
+        Disclaimer: Please note that this product does not provide any guarantee of income or success. The results achieved by the product owner or any other individuals mentioned are not indicative of future success or earnings. This website is not affiliated with FaceBook or any of its associated entities. Once you navigate away from FaceBook, the responsibility for the content and its usage lies solely with the user. All content on this website, including but not limited to text, images, and multimedia, is protected by copyright law and the Digital Millennium Copyright Act. Unauthorized copying, duplication, modification, or theft, whether intentional or unintentional, is strictly prohibited. Violators will be prosecuted to the fullest extent of the law.
+        <br><br>
+        We want to clarify that JVZoo serves as the retailer for the products featured on this site. JVZoo® is a registered trademark of BBC Systems Inc., a Florida corporation located at 1809 E. Broadway Street, Suite 125, Oviedo, FL 32765, USA, and is used with permission. The role of JVZoo as a retailer does not constitute an endorsement, approval, or review of these products or any claims, statements, or opinions used in their promotion.
+      </p>
+
+
+    </div>
+    <div class="site-footer__card">
+
+      <div class="site-footer__logo">
+        <img src="assets/images/logo_light.svg" alt="GEO Optimizer" width="180" height="39"
+          class="site-footer__logo-img">
+      </div>
+
+      <p class="site-footer__tagline">
+        AI Search Now Handles 40% of Queries Without a Click. Your WordPress Site is Invisible to All of It.
+        GEO Optimizer is the only WordPress plugin that structures your content so ChatGPT, Claude &amp;
+        Perplexity cite you instead of your competitors — in 60 seconds per post.
+      </p>
+
+      <p class="site-footer__copy">
+        © 2026 GEO Optimizer. All rights reserved. Made with ❤️ by
+        <a href="https://pixalab.ai/" target="_blank" rel="noopener noreferrer">PixaLab</a>
+        · Powered by
+        <a href="https://pixelnx.com/" target="_blank" rel="noopener noreferrer">PixelNX</a>
+      </p>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="../legal/privacy.html" contenteditable="false" style="cursor: pointer;">Privacy Policy</a>
+        <a href="../legal/terms.html" contenteditable="false" style="cursor: pointer;">Terms &amp; Conditions</a>
+        <a href="../legal/earnings.html" contenteditable="false" style="cursor: pointer;">Earnings Disclaimer</a>
+        <a href="../legal/disclaimer.html" contenteditable="false" style="cursor: pointer;">Disclaimer</a>
+        <a href="../legal/refund.html" contenteditable="false" style="cursor: pointer;">Refund Policy</a>
+        <a href="../legal/cookie.html" contenteditable="false" style="cursor: pointer;">Cookie Policy</a>
+        <a href="../legal/data.html" contenteditable="false" style="cursor: pointer;">Data Removal</a>
+        <a href="mailto:support@pixalab.ai" contenteditable="false" style="cursor: pointer;">Support</a>
+      </nav>
+
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script id="stickybarscript" src="https://stickybar.pixelnx.com/assets/js/stickybar.js?appid=322"></script>
+</body>
+
+</html>

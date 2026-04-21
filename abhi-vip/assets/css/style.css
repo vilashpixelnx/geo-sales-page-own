@@ -4774,7 +4774,7 @@ body {
 
 /* abhi bonus start */
 .bonus_value {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     color: #2067f3;
 }
@@ -4784,6 +4784,10 @@ body {
 }
 .abhi_bonus_section.abhi_botton_section {
     padding: 30px 0 0;
+}
+.abhi_bonus_section .geo_problem_wrapper h4 {
+    font-size: 30px;
+    margin: 10px 0 5px !important;
 }
 /* abhi bonus end */
 /* Responsive css */

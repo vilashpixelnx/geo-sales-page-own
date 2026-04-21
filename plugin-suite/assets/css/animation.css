@@ -1,0 +1,71 @@
+/* ============================================================
+   animation.css — Keyframes & Animation Utilities
+   GEO Optimizer AutoPilot (OTO1)
+   All scroll-triggered animations are handled by GSAP + ScrollTrigger
+   in main.js. This file covers:
+     - CSS @keyframes (decorative / always-on only)
+     - Prefers-reduced-motion override
+   ============================================================ */
+
+/* ── Prefers-Reduced-Motion ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* ── Glow Breathe ────────────────────────────────────────────── */
+@keyframes glow-breathe-centered {
+  0%,  100% { opacity: 0.6; transform: translateX(-50%) scale(1);    }
+  50%        { opacity: 1;   transform: translateX(-50%) scale(1.1);  }
+}
+
+@keyframes glow-breathe {
+  0%,  100% { opacity: 0.5; transform: scale(1);    }
+  50%        { opacity: 0.9; transform: scale(1.12); }
+}
+
+.hero__glow-1 {
+  animation: glow-breathe-centered 5s ease-in-out infinite;
+}
+
+.hero__glow-2 {
+  animation: glow-breathe 7s ease-in-out infinite;
+}
+
+/* ── Hero grid drift ────────────────────────────────────────── */
+@keyframes grid-drift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(48px, 48px); }
+}
+
+/* Pause grid on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+}
+
+/* ── Shimmer sweep on .btn-primary is handled via ::before in style.css ── */
+
+/* ── GSAP will-change hints ─────────────────────────────────── */
+/* Opacity/transform initial states are set by GSAP inline via
+   immediateRender:true — do NOT set opacity:0 here as it makes
+   GSAP read 0 as the animation target and animate 0→0 (invisible). */
+
+.js-fade-up,
+.js-fade-in,
+.js-slide-left {
+  will-change: transform, opacity;
+}
+
+/* ── Urgency note pulse (text color breathe, draws attention) ── */
+@keyframes urgency-pulse {
+  0%,  100% { opacity: 0.7; }
+  50%        { opacity: 1;   }
+}
+
+.urgency-note {
+  animation: urgency-pulse 2.5s ease-in-out infinite;
+}

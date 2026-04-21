@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <title>WAIT — One Final Upgrade | GEO Optimizer Plugin Suite</title>
+
+  <!-- Fonts: Bricolage Grotesque (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Shared stylesheets -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YNPJHHHLH"></script>
+  <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-1YNPJHHHLH'); </script>
+  <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '212563324850714');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=212563324850714&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+
+  <!-- OTO2-specific component extensions -->
+  <style>
+    /* ── Header — OTO2 override ──────────────────────────────── */
+    .site-header {
+      border-bottom: none;
+      background: #160516;
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-rainbow);
+      z-index: 1;
+    }
+
+    .site-header__tag {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, rgba(40, 135, 255, 0.06), rgba(34, 207, 255, 0.06));
+      border: 1px solid rgba(40, 135, 255, 0.18);
+      border-radius: 40px;
+      padding: 6px 18px 6px 8px;
+      font-size: 13px;
+      font-weight: var(--fw-semibold);
+      color: #ffffff;
+      flex: unset;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .site-header__tag {
+        display: inline-flex;
+      }
+    }
+
+    .site-header__tag::before {
+      content: '🔒';
+      font-size: 15px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .site-header__tag strong {
+      background: var(--grad-rainbow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: var(--fw-bold);
+    }
+
+    .hero {
+      padding-top: clamp(48px, 6vw, 80px);
+    }
+
+    /* ── Plugin card value strip ─────────────────────────────── */
+    .feature-card__value {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .feature-card__value-label {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      font-weight: var(--fw-medium);
+    }
+
+    .feature-card__value-amounts {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-card__value-was {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      text-decoration: line-through;
+    }
+
+    .feature-card__value-now {
+      font-size: 13px;
+      font-weight: var(--fw-bold);
+      color: var(--color-blue);
+    }
+
+    /* Red badge variant for Security plugin */
+    .feature-card__badge--red {
+      background: rgba(255, 0, 72, 0.08);
+      color: var(--color-red);
+    }
+
+    /* ── Value Stack Table ───────────────────────────────────── */
+    .value-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 20px;
+        box-shadow: rgb(178 212 255 / 40%) 0px 4px 20px 0px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+
+    .value-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .value-table thead th {
+      padding: 10px 16px;
+      font-size: 11px;
+      font-weight: var(--fw-bold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      border-bottom: 2px solid rgba(40, 135, 255, 0.12);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .value-table thead th:last-child {
+      text-align: right;
+    }
+
+    .value-table tbody td {
+      padding: 14px 16px;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      vertical-align: middle;
+    }
+
+    .value-table tbody td:first-child {
+      font-weight: var(--fw-semibold);
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+
+    .value-table tbody td:last-child {
+      text-align: right;
+      text-decoration: line-through;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .value-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .value-total {
+      background: var(--grad-rainbow-tint);
+      border: 1.5px solid rgba(40, 135, 255, 0.18);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .value-total__label {
+      font-size: var(--text-sm);
+      font-weight: var(--fw-semibold);
+      color: var(--color-text-muted);
+    }
+
+    .value-total__amounts {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .value-total__arrow {
+      font-size: 18px;
+      color: var(--color-text-muted);
+    }
+
+    .value-total__was {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      text-decoration: line-through;
+    }
+
+    .value-total__now {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: var(--fw-extrabold);
+      color: var(--color-blue);
+      line-height: 1;
+    }
+
+    /* Mobile tweaks for value table */
+    @media (max-width: 640px) {
+      .value-table tbody td:nth-child(2) {
+        display: none;
+      }
+
+      .value-total {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+  </style>
+
+  <!-- Skip URL for this page (read by main.js) -->
+  <script>window.SKIP_URL = 'https://geo-optimizer.com/';</script>
+
+  <!-- GSAP core + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+
+  <!-- Project scripts -->
+  <script src="assets/js/utils.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a href="#hero" class="site-header__logo" aria-label="GEO Optimizer — back to top">
+        <img src="assets/images/logo_light.svg" alt="GEO Optimizer" width="160" height="35" class="site-header__logo-img">
+      </a>
+      <p class="site-header__tag">
+        Final One-Time Upgrade —&nbsp;<strong>This Page Appears Once. Ever.</strong>
+      </p>
+      <a href="https://www.jvzoo.com/b/115893/437971/1" style="height: 40px;" class="btn-primary" rel="noopener noreferrer"
+        aria-label="Yes, add the Plugin Suite now for $47">
+        <span class="btn-primary__label">Get Instant Access </span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__glow-1" aria-hidden="true"></div>
+      <div class="hero__glow-2" aria-hidden="true"></div>
+      <div class="hero__glow-3" aria-hidden="true"></div>
+      <div class="container hero__inner">
+
+        <!-- Badge -->
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          ⚡ Wait — One Final Upgrade
+        </div>
+
+        <!-- Heading -->
+        <h1 class="hero__heading" id="hero-heading">
+          <span class="span_normal">Your AI Optimization Is Set.<br>
+          Now Protect The Site</span> <br>
+          <span class="gradient-text">That Earns It.</span>
+        </h1>
+
+        <!-- Sub -->
+        <p class="hero__sub">
+          You've done the hard part — your site is now AI-ready and on autopilot.
+          This one-time bundle gives you <strong>5 essential WordPress plugins</strong>
+          to keep it fast, secure, backed up, and online. Everything a serious
+          WordPress site needs — in one shot.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero__ctas">
+          <a href="#final-cta" class="btn-primary" rel="noopener noreferrer"
+            aria-label="Yes, add the Plugin Suite now for $47">
+            <span class="btn-primary__label">Get Instant Access </span>
+            <span class="btn-primary__price" aria-label="47 dollars">$47</span>
+          </a>
+          <a href="#includes" class="btn-outline">See What's Included</a>
+        </div>
+
+        <!-- Social proof -->
+        <div class="hero__proof">
+          <!--<div class="hero__avatars" aria-hidden="true">-->
+          <!--  <span class="hero__avatar" style="background:#6c8ebf;">R</span>-->
+          <!--  <span class="hero__avatar" style="background:#82b366;">S</span>-->
+          <!--  <span class="hero__avatar" style="background:#d6a84e;">K</span>-->
+          <!--  <span class="hero__avatar" style="background:#b85c8a;">P</span>-->
+          <!--</div>-->
+          <!--<div class="hero__proof-text">-->
+          <!--  <span class="hero__stars" aria-label="4.9 out of 5 stars">★★★★★</span>-->
+          <!--  <span class="hero__proof-label"><strong>4.9/5</strong> from 300+ WordPress users</span>-->
+          <!--</div>-->
+
+          <ul>
+            <li><img src="assets/images/1.jpg" alt="image"></li>
+            <li><img src="assets/images/2.jpg" alt="image"></li>
+            <li><img src="assets/images/3.jpg" alt="image"></li>
+            <li><span>★★★★★ 4.9/5</span><br>
+            from 300+ WordPress users</li>
+          </ul>
+        </div>
+
+        <!-- Trust strip -->
+        <div class="hero__trust" aria-label="Trust signals">
+          <span class="hero__trust-item">
+            <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="8" fill="#00c853" />
+              <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Works with any WordPress theme
+          </span>
+          <span class="hero__trust-item">
+            <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="8" fill="#00c853" />
+              <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            14-Day Money Back Guarantee
+          </span>
+          <span class="hero__trust-item">
+            <svg class="hero__trust-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="8" fill="#00c853" />
+              <path d="M4.5 8.5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            One-time payment — no subscription ever
+          </span>
+        </div>
+
+        <!-- Skip -->
+        <!--<a href="https://www.jvzoo.com/nothanks/437971" class="btn-skip" id="skip-btn" -->
+        <!--  aria-label="No thanks, decline this offer">-->
+        <!--  No thanks — I'll risk running my site without backups, security, or speed optimization-->
+        <!--</a>-->
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         BRIDGE / TRANSITION
+    ═══════════════════════════════════════════════════ -->
+    <section class="bridge section" id="bridge" aria-label="Bridge message">
+      <div class="container">
+        <div class="bridge__box">
+          <!--<div class="bridge__emoji-wrap" aria-hidden="true">🔒</div>-->
+          <div class="bridge__content">
+            <h2 class="bridge__heading">
+              You've invested in getting traffic. Now make sure you don't lose it.
+            </h2>
+            <p class="bridge__body">
+              GEO Optimizer and AutoPilot will build your AI search presence over time.
+              But here's the reality: <strong>none of that matters if your site goes down,
+                gets hacked, or loads in 6 seconds.</strong> AI citations drive warm,
+              high-intent traffic — traffic that disappears the moment your server throws
+              an error, a malware infection triggers a Google warning, or your site gets
+              wiped without a backup. This bundle closes that gap permanently — in a
+              single upgrade.
+            </p>
+          </div>
+           <div class="invested_img">
+            <img src="assets/images/in_bg.jpg" alt="image">
+        </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PROBLEM — Infrastructure Gaps
+    ═══════════════════════════════════════════════════ -->
+    <section class="section" id="problem" aria-labelledby="problem-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge section-badge--red">The Gaps That Kill Good Sites</span>
+          <h2 class="section-title" id="problem-heading">
+            You're Sending AI Traffic to a Site<br>
+            That's <span class="gradient-text--red">One Incident Away</span> From Gone.
+          </h2>
+          <p class="section-subtext">
+            Every WordPress site running without these protections is one event away from
+            losing everything — the rankings, the citations, the revenue, and the data.
+          </p>
+        </div>
+      </div>
+
+        <div class="geo_kill_good_box">
+            <img src="assets/images/kill_good.png" class="kill_good" alt="image">
+            <div class="problem-grid-wrapper">
+                <div class="problem-grid" id="problem-grid">
+                  <div class="problem-card">
+                    <p class="problem-card__icon" aria-hidden="true">💾</p>
+                    <h3 class="problem-card__title">No automated backups</h3>
+                    <p class="problem-card__body">
+                      A plugin update, a bad deploy, or a host failure can wipe your entire site.
+                      Without a recent backup, you're starting from zero — months or years of
+                      content, gone.
+                    </p>
+                  </div>
+
+                  <div class="problem-card">
+                    <p class="problem-card__icon" aria-hidden="true">🔓</p>
+                    <h3 class="problem-card__title">No security layer</h3>
+                    <p class="problem-card__body">
+                      WordPress powers 43% of the web — making it the #1 target for automated
+                      attacks. Without a firewall, brute-force protection, and malware scanning,
+                      your site is an open door.
+                    </p>
+                  </div>
+
+                  <div class="problem-card">
+                    <p class="problem-card__icon" aria-hidden="true">🐢</p>
+                    <h3 class="problem-card__title">Slow page load speed</h3>
+                    <p class="problem-card__body">
+                      Google penalises slow sites. AI engines struggle to process bloated pages.
+                      A site loading in 4+ seconds loses citations, rankings, and conversions —
+                      simultaneously.
+                    </p>
+                  </div>
+
+                  <div class="problem-card">
+                    <p class="problem-card__icon" aria-hidden="true">🖼️</p>
+                    <h3 class="problem-card__title">Unoptimised images dragging everything down</h3>
+                    <p class="problem-card__body">
+                      A single uncompressed hero image can add 2MB to your load. Most WordPress
+                      sites are full of them. WebP conversion alone can cut load times in half
+                      overnight.
+                    </p>
+                  </div>
+                </div>
+                <div class="problem-card-full">
+                    <div class="problem-card">
+                        <p class="problem-card__icon" aria-hidden="true">📡</p>
+                        <h3 class="problem-card__title">No visibility when your site goes down</h3>
+                        <p class="problem-card__body">
+                          On average, WordPress sites experience 2–3 hours of unnoticed downtime per
+                          month. Every minute your site is down while AI traffic is inbound is a
+                          citation that goes nowhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <blockquote class="pain-pull">
+              "Getting cited by AI is the goal. But
+              <span>a cited site that's slow, hacked, or offline</span>
+              is worse than being invisible — it actively destroys trust."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SOLUTION — 5 Plugin Cards
+    ═══════════════════════════════════════════════════ -->
+    <section class="section solution" id="solution" aria-labelledby="solution-heading">
+      <div class="container">
+
+        <div class="autopilot-product">
+          <div class="autopilot-product__icon" aria-hidden="true"><img src="assets/images/robot_icon.png" alt="image">️</div>
+          <div>
+            <p class="autopilot-product__name">GEO Optimizer Plugin Suite</p>
+            <p class="autopilot-product__subtitle">5 Plugins · One-Time Only</p>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title" id="solution-heading">
+            Five Plugins. One Bundle.<br>
+            <span class="gradient-text">Everything Your Site Actually Needs.</span>
+          </h2>
+          <p class="section-subtext">
+            Stop buying individual plugins at $49–$99/year each. This bundle gives you
+            all five — permanently — for a single one-time payment that's less than a
+            single annual subscription.
+          </p>
+        </div>
+
+        <div class="feature-grid" id="feature-grid">
+
+          <div class="feature-card">
+             <div class="geo_counting">01</div>
+            <img src="assets/images/p01.png" class="feature-card__emoji" alt="Icon" loading="lazy">
+            <span class="feature-card__badge">Backup &amp; Restore</span>
+            <h3 class="feature-card__title">WP Backup — Automated Daily Backups &amp; One-Click Restore</h3>
+            <p class="feature-card__body">
+              Automated daily backups stored securely off-site. Full site, database, and
+              media files backed up on schedule — with one-click restore if anything ever
+              goes wrong. Set it once, sleep soundly forever.
+            </p>
+            <div class="feature-card__value">
+              <span class="feature-card__value-label">Retail value</span>
+              <div class="feature-card__value-amounts">
+                <span class="feature-card__value-was">$79/yr</span>
+                <span class="feature-card__value-now">Included</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+              <div class="geo_counting">02</div>
+            <img src="assets/images/p02.png" class="feature-card__emoji" alt="Icon" loading="lazy">
+            <span class="feature-card__badge feature-card__badge--red">Security</span>
+            <h3 class="feature-card__title">WP Security — Firewall, Malware Scanning &amp; Brute-Force Protection</h3>
+            <p class="feature-card__body">
+              A robust security layer that blocks malicious traffic before it reaches
+              WordPress. Real-time malware scanning, login brute-force protection, IP
+              blocking, and a full activity log — so you always know what's happening
+              on your site.
+            </p>
+            <div class="feature-card__value">
+              <span class="feature-card__value-label">Retail value</span>
+              <div class="feature-card__value-amounts">
+                <span class="feature-card__value-was">$99/yr</span>
+                <span class="feature-card__value-now">Included</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+              <div class="geo_counting">03</div>
+            <img src="assets/images/p03.png" class="feature-card__emoji" alt="Icon" loading="lazy">
+            <span class="feature-card__badge feature-card__badge--orange">Performance</span>
+            <h3 class="feature-card__title">WP Speed — Caching, Minification &amp; CDN-Ready Performance</h3>
+            <p class="feature-card__body">
+              Page caching, CSS/JS minification, lazy loading, and GZIP compression —
+              all configured automatically. Get your site scoring 90+ on PageSpeed
+              without touching a line of code. CDN-ready out of the box.
+            </p>
+            <div class="feature-card__value">
+              <span class="feature-card__value-label">Retail value</span>
+              <div class="feature-card__value-amounts">
+                <span class="feature-card__value-was">$69/yr</span>
+                <span class="feature-card__value-now">Included</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+              <div class="geo_counting">04</div>
+            <img src="assets/images/p04.png" class="feature-card__emoji" alt="Icon" loading="lazy">
+            <span class="feature-card__badge feature-card__badge--green">Image Optimization</span>
+            <h3 class="feature-card__title">WP Image Optimizer — Compress &amp; WebP-Convert for Faster Load Times</h3>
+            <p class="feature-card__body">
+              Automatically compresses every image you upload — new and existing. Converts
+              to next-gen WebP format, strips metadata, and resizes oversized files on the
+              fly. Typically saves 40–70% on image file sizes with zero visible quality loss.
+            </p>
+            <div class="feature-card__value">
+              <span class="feature-card__value-label">Retail value</span>
+              <div class="feature-card__value-amounts">
+                <span class="feature-card__value-was">$59/yr</span>
+                <span class="feature-card__value-now">Included</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+              <div class="geo_counting">05</div>
+            <img src="assets/images/p05.png" class="feature-card__emoji" alt="Icon" loading="lazy">
+            <span class="feature-card__badge feature-card__badge--purple">Uptime Monitoring</span>
+            <h3 class="feature-card__title">WP Uptime Monitor — 24/7 Monitoring with Instant Downtime Alerts</h3>
+            <p class="feature-card__body">
+              Checks your site every minute from multiple global locations. The moment
+              your site goes down, you're alerted via email — so you can act before AI
+              crawlers, Google bots, or real visitors hit a dead page. Know before
+              your users do.
+            </p>
+            <div class="feature-card__value">
+              <span class="feature-card__value-label">Retail value</span>
+              <div class="feature-card__value-amounts">
+                <span class="feature-card__value-was">$49/yr</span>
+                <span class="feature-card__value-now">Included</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         BEFORE / AFTER — dark section
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--dark" id="ba" aria-labelledby="ba-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge section-badge--light">Your Site — Exposed vs. Protected</span>
+          <h2 class="section-title section-title--light" id="ba-heading">
+            Without the Suite vs. <span class="gradient-text">With the Suite</span>
+          </h2>
+        </div>
+
+        <div class="ba-grid">
+
+          <div class="ba-card ba-card--before">
+            <p class="ba-card__label">Without Plugin Suite</p>
+            <ul class="ba-list" aria-label="Without Plugin Suite">
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✗</span>No backup — one bad
+                update = total data loss</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✗</span>Open to bot attacks and
+                malware injections</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✗</span>Slow load times hurt AI
+                citations and rankings</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✗</span>Uncompressed images bloat
+                every page response</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✗</span>Site goes down — you find
+                out hours later from a reader</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✗</span>Paying $300–$400/year for
+                individual plugin licenses</li>
+            </ul>
+          </div>
+
+          <div class="ba-card ba-card--after">
+            <p class="ba-card__label">With Plugin Suite</p>
+            <ul class="ba-list" aria-label="With Plugin Suite">
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✓</span>Daily automated backups
+                with one-click restore</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✓</span>Firewall + malware
+                scanning running 24/7</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✓</span>PageSpeed 90+ — faster
+                sites, more AI citations</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✓</span>Every image
+                auto-compressed and WebP-converted</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✓</span>Instant alert the moment
+                any downtime is detected</li>
+              <li class="ba-list__item"><span class="ba-list__icon" aria-hidden="true">✓</span>All five plugins. One
+                payment. Zero ongoing fees.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         VALUE STACK TABLE
+    ═══════════════════════════════════════════════════ -->
+    <section class="section" id="value-table" aria-labelledby="value-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">Real-World Value</span>
+          <h2 class="section-title" id="value-heading">
+            What This Bundle Is Actually <span class="gradient-text">Worth</span>
+          </h2>
+          <p class="section-subtext">
+            Individual premium licenses for these 5 plugins would cost you $355+ per year —
+            every year. You pay once today. That's it.
+          </p>
+        </div>
+
+        <div class="value-table-wrap">
+          <table class="value-table" aria-label="Plugin value comparison">
+            <thead>
+              <tr>
+                <th scope="col">Plugin</th>
+                <th scope="col">What It Does</th>
+                <th scope="col">Retail Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>💾 WP Backup</td>
+                <td>Daily backups + one-click restore</td>
+                <td>$79/yr</td>
+              </tr>
+              <tr>
+                <td>🔐 WP Security</td>
+                <td>Firewall, malware scan, brute-force protection</td>
+                <td>$99/yr</td>
+              </tr>
+              <tr>
+                <td>⚡ WP Speed</td>
+                <td>Caching, minification, CDN-ready</td>
+                <td>$69/yr</td>
+              </tr>
+              <tr>
+                <td>🖼️ WP Image Optimizer</td>
+                <td>Compress + WebP convert on upload</td>
+                <td>$59/yr</td>
+              </tr>
+              <tr>
+                <td>📡 WP Uptime Monitor</td>
+                <td>24/7 monitoring + instant alerts</td>
+                <td>$49/yr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="value-total">
+          <p class="value-total__label">Total annual retail value (5 plugins):</p>
+          <div class="value-total__amounts">
+            <span class="value-total__was">$355/yr</span>
+            <span class="value-total__arrow" aria-hidden="true">→</span>
+            <span class="value-total__now">$47 once</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SOCIAL PROOF — dark section
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--dark" id="proof" aria-labelledby="proof-heading">
+      <div class="container-fluid" style="max-width: 1500px;margin: auto;padding: 0 15px;">
+
+        <div class="section-header">
+          <span class="section-badge section-badge--light">Real Customer</span>
+          <h2 class="section-title section-title--light" id="proof-heading">What Our Customers Say</h2>
+        </div>
+
+        <!--<div class="testimonial-card">-->
+        <!--  <div class="testimonial-card__avatar" aria-hidden="true">R</div>-->
+        <!--  <div>-->
+        <!--    <p class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</p>-->
+        <!--    <blockquote class="testimonial-card__quote">-->
+        <!--      "I was already running GEO Optimizer and AutoPilot. Adding the Plugin Suite-->
+        <!--      was a no-brainer. The Speed plugin alone took my PageSpeed score from 61 to 94.-->
+        <!--      The Security plugin found 3 vulnerabilities I didn't know I had. And last month-->
+        <!--      when my host had a bad update that wiped my database — the Backup plugin restored-->
+        <!--      everything in 4 minutes. Paid for itself 10 times over on that day alone."-->
+        <!--    </blockquote>-->
+        <!--    <p class="testimonial-card__meta">-->
+        <!--      <strong>Rahul S.</strong> — Affiliate Blogger &amp; WordPress Developer · Verified Buyer-->
+        <!--    </p>-->
+        <!--  </div>-->
+        <!--</div>-->
+
+        <div class="geo_tesmnl_slider_parent">
+          <div class="slider">
+            <div class="slide-track">
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Marcus B., Travel Blogger</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer was driving more AI traffic than I'd ever seen. Then I realized a slow site was letting that traffic bounce. Speed Optimization fixed it instantly — pages load in under a second now and my session times doubled.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Carla W., Online Course Creator</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I was finally getting cited in ChatGPT results regularly thanks to GEO Optimizer. The last thing I needed was my site going down and losing that momentum. Uptime Monitor caught an outage at 2am and alerted me before it cost me a day of traffic.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Ryan P., WordPress Developer</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I've paid $200+ for individual plugins that do less than what this suite delivers. Combined with GEO Optimizer, my sites are optimized for AI search AND bulletproof on the technical side. It's a complete site health stack at a fraction of the cost.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Sophie L., E-commerce Owner</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>GEO Optimizer got my product pages ranking in AI search results. Image Optimizer made sure those pages loaded fast enough to actually convert that traffic. The two together are a serious one-two punch.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Mike D., Freelance Web Designer</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>I hand off sites to clients after setup. Having Backup included means there's always a clean restore point when they inevitably install something that breaks things. Saves me hours of panic support calls every month.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="el_testimonials_box">
+                  <h4>Natalie C., Marketing Agency Director</h4>
+                  <img src="assets/images/rating.png" alt="image">
+                  <p>Security was the one piece I was always patching with separate plugins at separate costs. Getting Backup, Security, Speed, Image and Uptime bundled for $47 alongside GEO Optimizer made this the easiest buying decision I've made all year.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         WHAT YOU GET — lavender + CTA box
+    ═══════════════════════════════════════════════════ -->
+    <section class="section section--lavender" id="includes" aria-labelledby="includes-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">Everything Included</span>
+          <h2 class="section-title" id="includes-heading">
+            Your Complete <span class="gradient-text">Plugin Suite</span>
+          </h2>
+        </div>
+
+        <ul class="checklist" id="checklist" aria-label="Plugin Suite inclusions">
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>WP Backup</strong> — automated daily backups + one-click full site restore</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>WP Security</strong> — firewall, real-time malware scanning &amp; brute-force login protection
+            </p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>WP Speed</strong> — page caching, CSS/JS minification, lazy load &amp; CDN-ready configuration
+            </p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>WP Image Optimizer</strong> — auto-compress &amp; WebP-convert every image on upload</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>WP Uptime Monitor</strong> — 24/7 site monitoring + instant email alerts on downtime</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Future upgrades</strong> — pay once, receive all future updates free</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>Works on all sites</strong> licensed under your GEO Optimizer plan</p>
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">✓</span>
+            <p><strong>14-Day money-back guarantee</strong> — zero risk</p>
+          </li>
+        </ul>
+
+        <div class="cta-box" id="cta-box-includes">
+          <p class="cta-box__heading">
+            Ready to protect the site that earns<br>
+            <span class="gradient-text">your AI traffic?</span>
+          </p>
+          <a href="#final-cta" class="btn-primary" rel="noopener noreferrer" aria-label="Add Plugin Suite now for $47">
+            <span class="btn-primary__label">Get Instant Access </span>
+            <span class="btn-primary__price" aria-label="47 dollars">$47</span>
+          </a>
+          <div class="cta-box__skip">
+            <p class="cta-box__note">One-time payment · No subscription ever</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         GUARANTEE
+    ═══════════════════════════════════════════════════ -->
+    <section class="section" id="guarantee" aria-labelledby="guarantee-heading">
+      <div class="container">
+
+        <!--<div class="guarantee-box">-->
+        <!--  <div class="guarantee-box__badge" aria-label="14-day money back guarantee">-->
+        <!--    <img src="assets/images/guarantee-img.png" alt="Image">-->
+        <!--  </div>-->
+        <!--  <h2 class="section-title" id="guarantee-heading">-->
+        <!--    Zero Risk. Full Refund. No Questions.-->
+        <!--  </h2>-->
+        <!--  <p class="guarantee-box__body">-->
+        <!--    The Plugin Suite is covered by the same 14-day no-questions-asked money-back-->
+        <!--    guarantee as everything else in the GEO Optimizer family. If you're not-->
+        <!--    completely satisfied for any reason within 14 days, email us for a full refund-->
+        <!--    on this upgrade — no hoops, no conditions. You keep everything else regardless.-->
+        <!--  </p>-->
+        <!--  <div class="guarantee-items">-->
+        <!--    <div class="guarantee-item">-->
+        <!--      <span class="guarantee-item__icon" aria-hidden="true">✓</span>-->
+        <!--      <p>Full refund within 14 days, no questions asked</p>-->
+        <!--    </div>-->
+        <!--    <div class="guarantee-item">-->
+        <!--      <span class="guarantee-item__icon" aria-hidden="true">✓</span>-->
+        <!--      <p>Keep GEO Optimizer &amp; AutoPilot even if you refund</p>-->
+        <!--    </div>-->
+        <!--    <div class="guarantee-item">-->
+        <!--      <span class="guarantee-item__icon" aria-hidden="true">✓</span>-->
+        <!--      <p>Instant refund processing via JVZoo</p>-->
+        <!--    </div>-->
+        <!--    <div class="guarantee-item">-->
+        <!--      <span class="guarantee-item__icon" aria-hidden="true">✓</span>-->
+        <!--      <p>No hoops, no support tickets, no delays</p>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--</div>-->
+
+        <div class="geo_guarntee_box text-center">
+          <img src="assets/images/guarantee-img.png" alt="Image">
+          <h2 class="section-title" id="guarantee-heading">
+            Zero Risk. Full Refund.<br> No Questions.
+          </h2>
+          <p>The Plugin Suite is covered by the same 14-day no-questions-asked money-back guarantee as everything else in the GEO Optimizer family. If you're not completely satisfied for any reason within 14 days, email us for a full refund on this upgrade — no hoops, no conditions. You keep everything else regardless.</p>
+          <div class="geo_guarntee_bulelts d-flex justify-content-between">
+            <ul>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>Full refund within 14 days, no questions asked</p>
+              </li>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>Instant refund processing via JVZoo</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>Keep GEO Optimizer even if you refund AutoPilot</p>
+              </li>
+              <li>
+                <img src="assets/images/check.png" alt="icon">
+                <p>No hoops, no support tickets, no delays</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════════════════ -->
+    <section class="section final-cta" id="final-cta" aria-labelledby="final-cta-heading">
+      <div class="container">
+
+        <div class="cta-box">
+          <span class="section-badge section-badge--orange">Last Chance — This Offer Disappears When You Leave</span>
+          <h2 class="cta-box__heading" id="final-cta-heading">
+            GEO Optimizer builds your AI traffic.<br>
+            <span class="gradient-text">The Plugin Suite makes sure it lasts.</span>
+          </h2>
+          <p class="section-subtext">
+            Your site is the asset. Protect it, speed it up, and make sure it's always
+            online — for a single one-time payment you'll never see again.
+          </p>
+          <a href="https://www.jvzoo.com/b/115893/437971/1"><img src="https://i.jvzoo.com/115893/437971/1"
+              alt="GEO Optimizer Plugin Suite" border="0" /></a>
+
+          <div class="trust-row" aria-label="Trust signals">
+            <span class="trust-row__item">🔒 Secure via JVZoo</span>
+            <span class="trust-row__item">⚡ Instant Access</span>
+            <span class="trust-row__item">🛡️ 14-Day Guarantee</span>
+            <span class="trust-row__item"><span class="checklist__icon" aria-hidden="true" style="width: 18px;height: 18px;">✓</span> One-Time Payment · No Subscription</span>
+          </div>
+          <div class="cta-box__skip">
+            <a href="https://www.jvzoo.com/nothanks/437971" class="btn-skip" id="skip-btn-final"
+              aria-label="No thanks, decline this offer">No thanks — I'll manage security, speed and backups on my
+              own</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER — dark
+  ═══════════════════════════════════════════════════ -->
+  <footer class="site-footer section--dark" id="footer">
+    <div class="container">
+
+      <h2 class="site-footer__disclaimer-title">Important Disclaimer</h2>
+
+      <p class="site-footer__disclaimer">
+        Disclaimer: Please note that this product does not provide any guarantee of income or success. The results achieved by the product owner or any other individuals mentioned are not indicative of future success or earnings. This website is not affiliated with FaceBook or any of its associated entities. Once you navigate away from FaceBook, the responsibility for the content and its usage lies solely with the user. All content on this website, including but not limited to text, images, and multimedia, is protected by copyright law and the Digital Millennium Copyright Act. Unauthorized copying, duplication, modification, or theft, whether intentional or unintentional, is strictly prohibited. Violators will be prosecuted to the fullest extent of the law.
+        <br><br>
+        We want to clarify that JVZoo serves as the retailer for the products featured on this site. JVZoo® is a registered trademark of BBC Systems Inc., a Florida corporation located at 1809 E. Broadway Street, Suite 125, Oviedo, FL 32765, USA, and is used with permission. The role of JVZoo as a retailer does not constitute an endorsement, approval, or review of these products or any claims, statements, or opinions used in their promotion.
+      </p>
+
+    </div>
+    <div class="site-footer__card">
+
+      <div class="site-footer__logo">
+        <img src="assets/images/logo_light.svg" alt="GEO Optimizer" width="180" height="39"
+          class="site-footer__logo-img">
+      </div>
+
+      <p class="site-footer__tagline">
+        AI Search Now Handles 40% of Queries Without a Click. Your WordPress Site is Invisible to All of It.
+        GEO Optimizer is the only WordPress plugin that structures your content so ChatGPT, Claude &amp;
+        Perplexity cite you instead of your competitors — in 60 seconds per post.
+      </p>
+
+      <p class="site-footer__copy">
+        © 2026 GEO Optimizer. All rights reserved. Made with ❤️ by
+        <a href="https://pixalab.ai/" target="_blank" rel="noopener noreferrer">PixaLab</a>
+        · Powered by
+        <a href="https://pixelnx.com/" target="_blank" rel="noopener noreferrer">PixelNX</a>
+      </p>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="../legal/privacy.html" contenteditable="false" style="cursor: pointer;">Privacy Policy</a>
+        <a href="../legal/terms.html" contenteditable="false" style="cursor: pointer;">Terms &amp; Conditions</a>
+        <a href="../legal/earnings.html" contenteditable="false" style="cursor: pointer;">Earnings Disclaimer</a>
+        <a href="../legal/disclaimer.html" contenteditable="false" style="cursor: pointer;">Disclaimer</a>
+        <a href="../legal/refund.html" contenteditable="false" style="cursor: pointer;">Refund Policy</a>
+        <a href="../legal/cookie.html" contenteditable="false" style="cursor: pointer;">Cookie Policy</a>
+        <a href="../legal/data.html" contenteditable="false" style="cursor: pointer;">Data Removal</a>
+        <a href="mailto:support@pixalab.ai" contenteditable="false" style="cursor: pointer;">Support</a>
+      </nav>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

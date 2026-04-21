@@ -113,125 +113,14 @@ p {
   scroll-margin-top: 80px;
 }
 [data-aos] {
-  opacity: 0;
-  transform: translate3d(0, 40px, 0);
-  transition-property: opacity, transform;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  will-change: auto;
 }
 [data-aos].aos-animate {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-[data-aos][data-aos-delay="60"] {
-  transition-delay: 60ms;
-}
-[data-aos][data-aos-delay="70"] {
-  transition-delay: 70ms;
-}
-[data-aos][data-aos-delay="80"] {
-  transition-delay: 80ms;
-}
-[data-aos][data-aos-delay="90"] {
-  transition-delay: 90ms;
-}
-[data-aos][data-aos-delay="100"] {
-  transition-delay: 100ms;
-}
-[data-aos][data-aos-delay="120"] {
-  transition-delay: 120ms;
-}
-[data-aos][data-aos-delay="140"] {
-  transition-delay: 140ms;
-}
-[data-aos][data-aos-delay="160"] {
-  transition-delay: 160ms;
-}
-[data-aos][data-aos-delay="180"] {
-  transition-delay: 180ms;
-}
-[data-aos][data-aos-delay="200"] {
-  transition-delay: 200ms;
-}
-[data-aos][data-aos-delay="220"] {
-  transition-delay: 220ms;
-}
-[data-aos][data-aos-delay="240"] {
-  transition-delay: 240ms;
-}
-[data-aos][data-aos-delay="250"] {
-  transition-delay: 250ms;
-}
-[data-aos][data-aos-delay="260"] {
-  transition-delay: 260ms;
-}
-[data-aos][data-aos-delay="280"] {
-  transition-delay: 280ms;
-}
-[data-aos][data-aos-delay="320"] {
-  transition-delay: 320ms;
-}
-[data-aos][data-aos-delay="340"] {
-  transition-delay: 340ms;
-}
-[data-aos][data-aos-delay="360"] {
-  transition-delay: 360ms;
-}
-[data-aos][data-aos-delay="380"] {
-  transition-delay: 380ms;
-}
-[data-aos][data-aos-delay="400"] {
-  transition-delay: 400ms;
-}
-[data-aos][data-aos-delay="420"] {
-  transition-delay: 420ms;
-}
-[data-aos][data-aos-delay="440"] {
-  transition-delay: 440ms;
-}
-[data-aos][data-aos-delay="460"] {
-  transition-delay: 460ms;
-}
-[data-aos][data-aos-delay="480"] {
-  transition-delay: 480ms;
-}
-[data-aos][data-aos-delay="500"] {
-  transition-delay: 500ms;
-}
-[data-aos][data-aos-delay="520"] {
-  transition-delay: 520ms;
-}
-[data-aos][data-aos-delay="540"] {
-  transition-delay: 540ms;
-}
-[data-aos][data-aos-delay="560"] {
-  transition-delay: 560ms;
-}
-[data-aos][data-aos-delay="580"] {
-  transition-delay: 580ms;
-}
-[data-aos][data-aos-delay="600"] {
-  transition-delay: 600ms;
-}
-[data-aos="fade-up"] {
-  transform: translate3d(0, 40px, 0);
-}
-[data-aos="fade-down"] {
-  transform: translate3d(0, -40px, 0);
-}
-[data-aos="fade-left"] {
-  transform: translate3d(40px, 0, 0);
-}
-[data-aos="fade-right"] {
-  transform: translate3d(-40px, 0, 0);
-}
-[data-aos="zoom-in"] {
-  transform: scale(0.92);
-}
-[data-aos="flip-up"] {
-  transform: perspective(1000px) rotateX(16deg) translate3d(0, 40px, 0);
-  transform-origin: center bottom;
+  transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
   [data-aos] {
